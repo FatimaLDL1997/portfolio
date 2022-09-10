@@ -20,7 +20,7 @@ function App() {
   if (loading) {
     return (
       <div>
-        <img className='gif' src={gif} alt='' />;
+        <img className='preloader' src={gif} alt='' />;
       </div>
     );
   }

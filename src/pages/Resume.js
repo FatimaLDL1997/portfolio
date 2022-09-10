@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import StyledNavbar from "../components/StyledNavbar";
-
 const Resume = () => {
   let [numPages, setNumPages] = useState(null);
   let [pageNumber, setPageNumber] = useState(1);
@@ -31,17 +30,34 @@ const Resume = () => {
   };
 
   const handleResize = () => {
-    console.log(window.innerWidth);
     const menuIcon = document.querySelector(".menuIcon").style;
     const page = document.querySelector(".resume");
-    console.log(page);
     if (window.innerWidth < 800 && page != null) {
-      console.log("small");
       menuIcon.color = "white";
-      console.log(menuIcon.color);
     } else {
       menuIcon.color = "#2a4855";
     }
+  };
+  const [zoomCount, setZoomCount] = useState(1);
+  const handleZoomOut = () => {
+    setZoomCount((zoomCount) => {
+      if (zoomCount > 1) {
+        let newCount = zoomCount - 2;
+        console.log("zoom out " + newCount);
+        return newCount;
+      }
+      return zoomCount;
+    });
+  };
+  const handleZoomIn = () => {
+    setZoomCount((zoomCount) => {
+      if (zoomCount < 20) {
+        let newCount = zoomCount + 2;
+        console.log("zoom in " + newCount);
+        return newCount;
+      }
+      return zoomCount;
+    });
   };
   useEffect(() => {
     window.addEventListener("resize", () => handleResize());
@@ -58,15 +74,22 @@ const Resume = () => {
     <div className='resume'>
       <header className='resume-header'>
         <Document
+          style={{ width: "90vw" }}
           file='EngResume2022.pdf'
           onLoadSuccess={onDocumentLoadSuccess}
         >
-          <Page
-            style={{ height: "600vh", width: "auto" }}
-            pageNumber={pageNumber}
-          />
+          {console.log("count: " + zoomCount)}
+          <Page pageNumber={pageNumber} scale={zoomCount} />
         </Document>
       </header>
+      <div className='zoom-control'>
+        <button className='zoom-out' onClick={() => handleZoomOut()}>
+          {"-"}
+        </button>
+        <button className='zoom-in' onClick={() => handleZoomIn()}>
+          {"+"}
+        </button>
+      </div>
       <div className='page-control'>
         <button className='next-page' onClick={() => handleIncrement()}>
           {"<"}
