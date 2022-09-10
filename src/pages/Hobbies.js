@@ -22,7 +22,6 @@ const Hobbies = () => {
   const nextImage = (e) => {
     e.preventDefault();
     setClickedLeft(false);
-
     setClickedRight(true);
 
     setIndex((index) => {
