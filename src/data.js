@@ -83,7 +83,7 @@ export const projects = [
     id: 6,
     icon: <FaShoppingCart />,
     text: "Grocery Bud",
-    category: "Web Development",
+    category: "Web",
     vid: "",
     desc: "This website I made can help you manage your budget better.Through it, you can create infinite number of lists. Each list calculates its total for you automatically each time you add or remove an item. Also there is no limit as to how much items you can delete and add I have also added localStorage too to make more easy to use. So everytime you need to leave your phone and come back to it later or everytime you refresh the page, you will lose no data at all. ",
     url: "https://groceryhelper2022.netlify.app/",
@@ -92,7 +92,7 @@ export const projects = [
     id: 7,
     icon: <AiFillProject />,
     text: "Projects Website",
-    category: "Web Development",
+    category: "Web ",
     vid: "",
     desc: "Inspired by John Smilga's projects website, I decided to categorize and create my own collection of projects all under one website. I used Figma to draw out my plan and decide on which colour scheme looks best. Then I started with the SCSS and HTML followed by JS. I made sure its responsive on all screens and has the least cross browser compatibility issues possible. I used GitHub Webpages and also Netlify this time to publish my website by committing and pushing the code from my VS Code directly to GitHub and Netlify.  So far, I only have Vanilla JS projects to share with you on it. I envision this website to be filled with amazing projects in the future as I teach myself more skills.",
     url: "https://projects-fatima.netlify.app/",
@@ -101,7 +101,7 @@ export const projects = [
     id: 8,
     icon: <BsPersonCircle />,
     text: "Portfolio Website",
-    category: "Web Development",
+    category: "Web",
     vid: "",
     desc: " It all started with watching some freeCodeCamp and Udemy tutorials and imitating some of their landing webpages. I then got the inspiration to create my own website and to design it myself as well. I started out with Figma to visualize the design and to figure out how to place all the elements together. After that, I used HTML, SCSS and JavaScript to bring my design to life. I made sure it is responsive to all different screen sizes. I also made sure it is easy to navigate through it no matter which device you are on. I used Gihub Webpages, afterwards to publish my website by commiting and pushing the code from VS Code directly to Github.As you can see by now since you are on the website, it has so much to tell you about who I am which was my goal for this project. Currently, I am learning more about JavaScript and React and applying what I learn to improve on this website everytime I get the chance to.",
     url: "https://fatima-labade.netlify.app/page3.html#",
@@ -111,7 +111,7 @@ export const skills = [
   {
     id: 1,
     url: "/images/html.png",
-    category: "Web Development",
+    category: "Web ",
     text: "HTML",
   },
   {
@@ -141,19 +141,19 @@ export const skills = [
   {
     id: 6,
     url: "/images/css.png",
-    category: "Web Development",
+    category: "Web",
     text: "CSS",
   },
   {
     id: 7,
     url: "/images/react.png",
-    category: "Web Development",
+    category: "Web",
     text: "REACT",
   },
   {
     id: 8,
     url: "/images/js.png",
-    category: "Web Development",
+    category: "Web",
     text: "JS",
   },
   {
@@ -243,7 +243,7 @@ export const skills = [
   {
     id: 24,
     url: "/images/mySQL.png",
-    category: "Web Development",
+    category: "Web",
     text: "MySQL",
   },
   {
