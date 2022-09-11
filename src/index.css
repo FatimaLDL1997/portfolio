@@ -10,6 +10,9 @@ body {
   overflow-x: hidden !important;
   user-select: none;
 }
+html {
+  overflow-x: hidden;
+}
 .video iframe {
   width: auto;
   height: 200px;
