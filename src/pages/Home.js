@@ -11,11 +11,11 @@ const Home = () => {
   return (
     <section className='pageContainer' onWheel={handleScroll}>
       <h1 className='home-title'>Fatima Labade</h1>
-      <h5 className='subtitle'>Web Developer, Artist and Engineer</h5>
+      <h5 className='subtitle'>Web Developer and Engineer</h5>
       <img src='/images/code-girl.png' className='my-image' alt='' />
       <h5 className='home-discription'>
-        I'm a Mechatronics Engineer skilled in web development with a very
-        strong background in Robotics programming. I recently graduated and I am
+        I am a Mechatronics Engineer skilled in web development with a very
+        strong background in Robotics programming. As a recent graduate, I am
         looking for an entry-level engineering job to jumpstart my career.
       </h5>
     </section>
