@@ -30,10 +30,8 @@ const Navbar = () => {
     setPressed(!pressed);
     if (!pressed) {
       document.body.style.overflow = "hidden";
-      document.body.classList.add("overlay");
     } else {
       document.body.style.overflow = "visible";
-      document.body.classList.remove("overlay");
     }
   };
 
