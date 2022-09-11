@@ -432,7 +432,30 @@ li {
   padding-bottom: 10px;
   text-decoration: none;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #808080;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #73a3b8;
+  border-radius: 10px;
+  border: 0.09em solid #def0f2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #054661c1;
+}
 .scroll {
+  display: none !important;
   text-align: center;
   display: block;
   font-size: 3vh;
