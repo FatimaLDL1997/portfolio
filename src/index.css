@@ -113,14 +113,13 @@ code {
 .menu-fadeOut {
   background-color: #73a3b8;
   width: 50vw;
-  height: 30vh;
+  height: 0rem;
   border-radius: 2%;
   animation-name: animateOpacityOut;
   animation-duration: 1s;
   opacity: 0;
   position: absolute;
   transition: 1s;
-  z-index: 1;
 }
 .menu-fadeIn {
   background-color: #73a3b8;
