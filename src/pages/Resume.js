@@ -51,7 +51,7 @@ const Resume = () => {
   };
   const handleZoomIn = () => {
     setZoomCount((zoomCount) => {
-      if (zoomCount < 20) {
+      if (zoomCount < 10) {
         let newCount = zoomCount + 2;
         console.log("zoom in " + newCount);
         return newCount;

@@ -64,6 +64,9 @@ code {
   .footer-links {
     font-size: 1.5rem !important;
   }
+  .zoom-control {
+    display: none !important;
+  }
 }
 /*when its large */
 @media screen and (min-width: 800px) {
@@ -86,6 +89,9 @@ code {
   .hobbiesImg {
     height: 60vh !important;
   }
+  .zoom-control {
+    display: block;
+  }
 }
 .menuIcon {
   position: absolute;
@@ -97,14 +103,14 @@ code {
   z-index: 3;
 }
 .menuIcon:hover {
-  transform: scale(1.5) rotate(360deg);
-  transition: 0.5s;
+  transform: scale(1.5);
+  transition: 0.9s;
 }
 .menuContainer {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 40px;
+  top: 3rem;
   z-index: 6;
 }
 .menu {
@@ -112,7 +118,7 @@ code {
 }
 .menu-fadeOut {
   background-color: #73a3b8;
-  width: 50vw;
+  width: 0vw;
   height: 0rem;
   border-radius: 2%;
   animation-name: animateOpacityOut;
@@ -127,7 +133,7 @@ code {
   justify-content: center;
   text-align: center;
   width: 80vw;
-  height: 80vh;
+  height: 60vh;
   border-radius: 2%;
   animation-name: animateOpacityIn;
   animation-duration: 1s;
@@ -141,18 +147,22 @@ code {
 
 @keyframes animateOpacityOut {
   from {
-    opacity: 1;
+    height: 60vh;
+    width: 80vw;
   }
   to {
-    opacity: 0;
+    height: 0vh;
+    width: 0vw;
   }
 }
 @keyframes animateOpacityIn {
   from {
-    opacity: 0;
+    height: 0vh;
+    width: 0vw;
   }
   to {
-    opacity: 1;
+    height: 60vh;
+    width: 80vw;
   }
 }
 
@@ -243,6 +253,7 @@ li {
   margin: 1rem;
   font-weight: 100;
   padding: 0px;
+  padding-top: 4rem;
   padding-left: 60px;
   padding-right: 60px;
   text-align: center;
@@ -259,6 +270,9 @@ li {
   text-align: center;
   align-items: center;
 }
+/* .pageContainer {
+  padding-top: 4rem;
+} */
 .home-discription {
   display: flex;
   margin: 0;
@@ -710,7 +724,7 @@ a {
 }
 .zoom-control {
   display: flex;
-  top: 5rem;
+  top: 4rem;
   width: 100vw;
   position: fixed;
   height: 5vh;
