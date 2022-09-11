@@ -581,7 +581,7 @@ a {
   z-index: 3;
   padding-left: 9vw;
   padding-right: 9vw;
-  gap: 20px 20px;
+  gap: 2rem 2rem;
 }
 .section-center-skills {
   display: flex;
