@@ -18,7 +18,7 @@ const ProjectItem = () => {
       <h3 className='categoryTitle'>{category}</h3>
       <div className='project-discription'>
         <h5 className='descText' id={id}>
-          {readMore ? desc : `${desc.substring(0, 200)}...`}
+          {readMore ? desc : `${desc.substring(0, 150)}...`}
 
           <span className={`read-more`} onClick={() => handleRead()}>
             {readMore ? " read less" : " read more"}
