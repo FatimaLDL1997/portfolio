@@ -658,7 +658,7 @@ a {
   text-align: center;
 }
 .resume-header {
-  padding-top: 10vh;
+  padding-top: 10rem;
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
