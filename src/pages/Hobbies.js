@@ -62,9 +62,9 @@ const Hobbies = () => {
         </div>
         <h4 className='discription'>
           Painting is the best thing to do as a hobby. To me at least. It is
-          like travelling to another world when you lose yourself to your
-          colours and your brush. Some of my best art and commision work
-          collection is posted here.
+          like travelling to another world when I lose myself to my colours and
+          my brush. Some of my best art and commision work collection is posted
+          here.
         </h4>
         <div className={`scroll`}>
           <BsChevronDoubleDown />
