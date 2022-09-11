@@ -17,13 +17,13 @@ function App() {
 
     return window.removeEventListener("load", () => setLoading(false));
   }, []);
-  if (loading) {
-    return (
-      <div>
-        <img className='preloader' src={gif} alt='' />;
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div>
+  //       <img className='preloader' src={gif} alt='' />;
+  //     </div>
+  //   );
+  // }
 
   return (
     <BrowserRouter>
