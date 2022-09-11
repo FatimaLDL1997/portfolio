@@ -292,17 +292,17 @@ export const skills = [
 
 export const hobbies = [
   {
-    id: 1,
+    id: 8,
     img: "/images/art/forest.jpg",
     text: " Forest Vibes - Acrylics",
   },
   {
-    id: 2,
+    id: 3,
     img: "/images/art/beach.jpg",
     text: "Tropical Beach - Acrylics",
   },
   {
-    id: 3,
+    id: 2,
     img: "/images/art/hammock.jpg",
     text: "Hammock on the Sea - Acrylics",
   },
@@ -321,13 +321,9 @@ export const hobbies = [
     img: "/images/art/balloon_LI.jpg",
     text: "Air Baloon - Digital",
   },
+
   {
-    id: 7,
-    img: "/images/art/bearzoom.jpg",
-    text: "Bear (zoomed) - oil pastal",
-  },
-  {
-    id: 8,
+    id: 1,
     img: "/images/art/cat.PNG",
     text: "Cat - Prisma",
   },
@@ -340,11 +336,6 @@ export const hobbies = [
     id: 10,
     img: "/images/art/elephant.jpg",
     text: "Elephant - Oil Pastal",
-  },
-  {
-    id: 11,
-    img: "/images/art/elephantzoom.jpg",
-    text: "Elephant (zoomed) - Oil Pastal",
   },
   {
     id: 12,

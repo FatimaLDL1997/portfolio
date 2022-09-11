@@ -559,8 +559,8 @@ a {
   background: #b6cbd5;
   font-size: 0.8rem;
   text-transform: capitalize;
-  margin: 0.5rem 1rem;
-  border-radius: 0rem;
+  margin: 0.3rem 1rem;
+  border-radius: 0.1rem;
   padding: 0.3rem;
   color: black;
   cursor: pointer;
@@ -606,12 +606,12 @@ a {
 }
 .projectItem {
   background-color: #95b7c693;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   padding: 5%;
   width: 200px;
   min-width: fit-content;
-  -webkit-box-shadow: 8px 8px 8px -3px rgba(0, 0, 0, 0.25);
-  box-shadow: 8px 8px 8px -3px rgb(0 0 0 / 25%);
+  /* -webkit-box-shadow: 8px 8px 8px -3px rgba(0, 0, 0, 0.25);
+  box-shadow: 8px 8px 8px -3px rgb(0 0 0 / 25%); */
   justify-content: center;
 }
 
