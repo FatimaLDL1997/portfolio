@@ -244,15 +244,23 @@ li {
   text-align: center;
   display: flex;
   padding-bottom: 0;
-  width: 60vh;
+  width: 20rem;
 }
 .home-title {
   position: relative;
-  top: 9vh;
+  top: 3rem;
   text-align: center;
-  font-size: 6vh;
-  font-family: monospace;
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
   font-weight: bolder;
+}
+.subtitle {
+  position: relative;
+  top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: lighter;
 }
 .discription {
   display: flex;
@@ -350,7 +358,7 @@ li {
   padding-bottom: 120px;
 }
 .hobbiesImg {
-  border-radius: 20px;
+  border-radius: 2rem;
   width: auto;
   height: 70vh;
   display: flex;
@@ -552,7 +560,7 @@ a {
   font-size: 0.8rem;
   text-transform: capitalize;
   margin: 0.5rem 1rem;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   padding: 0.3rem;
   color: black;
   cursor: pointer;
