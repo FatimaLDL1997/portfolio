@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { fullScreenAnimation } from "../data";
+import Skills from "./Skills";
+import Projects from "./Projects";
+import Hobbies from "./Hobbies";
 
 const Home = () => {
   const handleScroll = (event) => {
@@ -92,7 +95,7 @@ const Home = () => {
         I am Fatima Labade.
       </motion.h5>
       <motion.h5 variants={leftToRight} className='home-prefession'>
-        A Web Designer {"&"} Engineer
+        A Web Developer {"&"} Engineer
       </motion.h5>
       <img src='/images/bg-img.png' className='my-image' alt='' />
       <motion.p variants={fadeInZoom} className='home-discription'></motion.p>
