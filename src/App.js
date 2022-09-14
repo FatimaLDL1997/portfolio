@@ -8,7 +8,8 @@ import Hobbies from "./pages/Hobbies";
 import ProjectItem from "./pages/ProjectItem";
 
 import SharedLayout from "./pages/SharedLayout";
-import gif from "../src/preloader2.gif";
+import { motion } from "framer-motion";
+
 function App() {
   const [loading, setLoading] = useState(true);
 

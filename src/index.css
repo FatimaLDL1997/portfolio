@@ -1,7 +1,7 @@
 body {
   margin: 0;
   width: 100vw;
-  background-color: rgba(206, 233, 236, 0.667);
+  background-color: #404f4f;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -16,7 +16,7 @@ html {
 .video iframe {
   width: auto;
   height: 200px;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   border-style: none;
   opacity: 0.7;
 }
@@ -37,21 +37,25 @@ code {
   padding: 20%;
   opacity: 0;
 }
-.navbar-wrapper {
-  margin: auto;
-  overflow: hidden;
-}
 .navbar {
-  background-color: #73a3b8;
-  width: 100vw;
-  margin: 0 auto;
-  display: flex;
-  height: 3rem;
-  justify-content: space-around;
+  background-color: rgba(115, 163, 184, 0);
   position: fixed;
-  top: 0;
-  z-index: 7;
-  box-shadow: 4px 0px 13px 2px rgb(0 0 0 / 25%);
+  height: 4rem;
+  width: 100%;
+  top: 0px;
+
+  margin-top: 0;
+  left: 50%;
+  margin-left: -50%;
+  z-index: 1;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  /* box-shadow: 4px 0px 13px 2px rgb(0 0 0 / 25%); */
 }
 /*when its small */
 @media screen and (max-width: 800px) {
@@ -120,7 +124,7 @@ code {
   background-color: #73a3b8;
   width: 0vw;
   height: 0rem;
-  border-radius: 2%;
+  /* border-radius: 2%; */
   animation-name: animateOpacityOut;
   animation-fill-mode: forwards;
   animation-duration: 1s;
@@ -137,7 +141,7 @@ code {
   text-align: center;
   width: 80vw;
   height: 60vh;
-  border-radius: 2%;
+  /* border-radius: 2%; */
   animation-name: animateOpacityIn;
   animation-duration: 1s;
   position: absolute;
@@ -175,15 +179,15 @@ code {
 
 .links {
   text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   padding: 0.3rem;
   justify-content: space-evenly;
 }
 .links:hover {
-  color: rgb(6, 34, 69);
+  color: rgb(148, 135, 51);
   transition: 0.5s ease-in;
   text-decoration: none;
 }
@@ -202,7 +206,7 @@ code {
   transition: 1s ease-out;
 }
 .active {
-  color: rgb(6, 34, 69);
+  color: rgb(192, 231, 182);
   transition: 1s ease-in-out;
   text-decoration: none;
 }
@@ -239,29 +243,40 @@ li {
 }
 
 .my-image {
-  margin: auto;
-  position: relative;
-  text-align: center;
-  display: flex;
-  padding-bottom: 0;
-  width: 20rem;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 .home-title {
   position: relative;
-  top: 3rem;
+  font-family: "Hubballi";
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #faedcd;
+  top: 4rem;
   text-align: center;
-  font-size: 3rem;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bolder;
+  font-size: 2rem;
+  padding-top: 30vh;
 }
 .subtitle {
   position: relative;
   top: 1rem;
   text-align: center;
-  font-size: 2rem;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: lighter;
+  font-size: 3rem;
+
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 400;
+
+  margin-bottom: 2rem;
+  margin-top: 3.5rem;
+  color: #faedcd;
 }
+
 .discription {
   display: flex;
   justify-content: center;
@@ -288,17 +303,29 @@ li {
 /* .pageContainer {
   padding-top: 4rem;
 } */
+.home-prefession {
+  display: flex;
+  justify-content: center;
+
+  font-size: 2rem;
+  font-family: "Hubballi";
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 0;
+  color: #faedcd;
+}
 .home-discription {
   display: flex;
-  margin: 0;
   justify-content: center;
-  font-weight: 400;
-  padding: 0px;
-  padding-bottom: 5vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-family: "Hubballi";
+  font-style: normal;
+  font-weight: 300;
+  margin-top: 0;
+  color: #faedcd;
   text-align: center;
-  font-size: 1rem;
+  padding: 3rem;
 }
 .home-discription:last-child {
   padding-bottom: 15vh;
@@ -335,7 +362,7 @@ li {
 }
 
 .pageTitle {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
   font-size: xx-large;
   font-weight: 500;
@@ -358,7 +385,7 @@ li {
   padding-bottom: 120px;
 }
 .hobbiesImg {
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   width: auto;
   height: 70vh;
   display: flex;
@@ -448,7 +475,7 @@ li {
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 2px #808080;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 /* Handle */
@@ -496,27 +523,26 @@ li {
   justify-content: center;
   padding-top: 50px;
 }
-
 .footer {
   position: fixed;
-  bottom: 0;
-  width: 100vw;
-  background-color: #73a3b8;
-  display: flex;
-  padding-top: 0.3rem;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  z-index: 3;
-  box-shadow: 4px 0px 13px 2px rgb(0 0 0 / 25%);
+  bottom: 0.5rem;
+  left: 0.5rem;
 }
-
 .footer-links {
   font-size: 2rem;
-  color: #345a6a;
+  color: #8a8579;
+}
+@keyframes scaleUp {
+  from {
+    font-size: 2rem;
+  }
+  to {
+    font-size: 2.5rem;
+  }
 }
 .footer-links:hover {
-  color: #19516b;
+  color: #c7bca3;
+  animation: scaleUp 2s;
 }
 a {
   text-decoration: none;
@@ -560,7 +586,7 @@ a {
   font-size: 0.8rem;
   text-transform: capitalize;
   margin: 0.3rem 1rem;
-  border-radius: 0.1rem;
+  /* border-radius: 0.1rem; */
   padding: 0.3rem;
   color: black;
   cursor: pointer;
@@ -675,7 +701,7 @@ a {
   position: relative;
   margin: 8px 0 8px 0;
   background: #345a6a;
-  border-radius: 25px;
+  /* border-radius: 25px; */
   padding: 4px;
   box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
 }
@@ -683,10 +709,10 @@ a {
   display: block;
   height: 100%;
   /* width: 35%; */
-  border-top-right-radius: 20px;
+  /* border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 20px; */
   background-color: rgb(128 176 197);
   background-image: linear-gradient(
     center bottom,
@@ -708,7 +734,7 @@ a {
 }
 .resume-header {
   padding-top: 1.5rem;
-  background-color: #282c34;
+  background-color: #404f4f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -748,7 +774,7 @@ a {
   position: relative;
   color: white;
   background-color: #2a4855;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   width: fit-content;
   padding: 1%;
   z-index: -1;
@@ -785,7 +811,7 @@ a {
   text-transform: capitalize;
   margin: 0rem 0.5vw;
   letter-spacing: 1px;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   color: black;
   min-width: 2rem;
   cursor: pointer;
@@ -801,7 +827,7 @@ a {
   text-transform: capitalize;
   margin: 0rem 0.5vw;
   letter-spacing: 1px;
-  border-radius: 0.3rem;
+  /* border-radius: 0.3rem; */
   padding: 0.5vh 2vh;
   color: black;
   cursor: pointer;

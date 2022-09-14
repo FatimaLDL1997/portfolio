@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { skills } from "../data";
+import { fullScreenAnimation } from "../data";
+
 import Skill from "./Skill";
+import { motion } from "framer-motion";
+
 const categories = ["all", ...new Set(skills.map((item) => item.category))];
 const Skills = () => {
   const [menuItems, setMenuItems] = useState(skills);
@@ -14,9 +18,13 @@ const Skills = () => {
     const newItems = skills.filter((skill) => skill.category === item);
     setMenuItems(newItems);
   };
-
   return (
-    <section className='pageContainer'>
+    <motion.section
+      variants={fullScreenAnimation}
+      initial='hidden'
+      animate='show'
+      className='pageContainer'
+    >
       <div className='titleContainer'>
         <h2 className='pageTitle'>Skills</h2>
       </div>
@@ -43,7 +51,7 @@ const Skills = () => {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -10,6 +10,21 @@ import { GiFactory } from "react-icons/gi";
 import { BsPersonCircle } from "react-icons/bs";
 import { AiFillProject } from "react-icons/ai";
 import { TbDeviceComputerCamera } from "react-icons/tb";
+export const fullScreenAnimation = {
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.5,
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    y: 500,
+  },
+};
 export const links = [
   {
     id: 1,
@@ -92,7 +107,7 @@ export const projects = [
     id: 7,
     icon: <AiFillProject />,
     text: "Projects Website",
-    category: "Web ",
+    category: "Web",
     vid: "",
     desc: "Inspired by John Smilga's projects website, I decided to categorize and create my own collection of projects all under one website. I used Figma to draw out my plan and decide on which colour scheme looks best. Then I started with the SCSS and HTML followed by JS. I made sure its responsive on all screens and has the least cross browser compatibility issues possible. I used GitHub Webpages and also Netlify this time to publish my website by committing and pushing the code from my VS Code directly to GitHub and Netlify.  So far, I only have Vanilla JS projects to share with you on it. I envision this website to be filled with amazing projects in the future as I teach myself more skills.",
     url: "https://projects-fatima.netlify.app/",
@@ -111,7 +126,7 @@ export const skills = [
   {
     id: 1,
     url: "/images/html.png",
-    category: "Web ",
+    category: "Web",
     text: "HTML",
   },
   {
@@ -321,7 +336,11 @@ export const hobbies = [
     img: "/images/art/balloon_LI.jpg",
     text: "Air Baloon - Digital",
   },
-
+  {
+    id: 7,
+    img: "/images/art/bearzoom.jpg",
+    text: "Bear (zoomed) - oil pastal",
+  },
   {
     id: 1,
     img: "/images/art/cat.PNG",
@@ -336,6 +355,11 @@ export const hobbies = [
     id: 10,
     img: "/images/art/elephant.jpg",
     text: "Elephant - Oil Pastal",
+  },
+  {
+    id: 11,
+    img: "/images/art/elephantzoom.jpg",
+    text: "Elephant (zoomed) - Oil Pastal",
   },
   {
     id: 12,

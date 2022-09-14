@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
-import StyledNavbar from "../components/StyledNavbar";
+import { fullScreenAnimation } from "../data";
+import { motion } from "framer-motion";
+
 const Resume = () => {
   let [numPages, setNumPages] = useState(null);
   let [pageNumber, setPageNumber] = useState(1);
@@ -71,7 +73,12 @@ const Resume = () => {
   });
 
   return (
-    <div className='resume'>
+    <motion.div
+      variants={fullScreenAnimation}
+      initial='hidden'
+      animate='show'
+      className='resume'
+    >
       <header className='resume-header'>
         <Document
           style={{ width: "90vw" }}
@@ -101,7 +108,7 @@ const Resume = () => {
           {">"}
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

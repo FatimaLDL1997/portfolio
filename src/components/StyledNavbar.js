@@ -1,8 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
-import { useState, useEffect, useRef, useContext } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { links } from "../data";
 import React from "react";
 
@@ -10,7 +9,6 @@ let count = 0;
 
 const Navbar = () => {
   const [pressed, setPressed] = useState(false);
-  const [resumeOn, setResumeOn] = useState(false);
 
   const menuRef = useRef(null);
   useEffect(() => {
@@ -34,22 +32,60 @@ const Navbar = () => {
       document.body.style.overflow = "visible";
     }
   };
-
+  const animateNav = {
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeIn",
+        staggerChildren: 0.35,
+      },
+    },
+    hidden: {
+      y: -200,
+      opacity: 0,
+    },
+  };
+  const item = {
+    hidden: {
+      opacity: 0,
+      y: 10,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        ease: "easeInOut",
+        duration: 2,
+      },
+    },
+    exit: {
+      opacity: 0,
+      x: 200,
+    },
+  };
   return (
     <>
-      <div className='navbar-wrapper'>
-        <nav className='navbar'>
-          {links.map((link) => {
-            const { id, url, text } = link;
+      <motion.nav
+        variants={animateNav}
+        initial='hidden'
+        animate='show'
+        className='navbar'
+      >
+        {links.map((link) => {
+          const { id, url, text } = link;
 
-            return (
-              <NavLink className='links' key={id} to={url}>
-                {text}
-              </NavLink>
-            );
-          })}
-        </nav>
-      </div>
+          return (
+            <NavLink className='links' key={id} to={url}>
+              {text}
+            </NavLink>
+          );
+        })}
+      </motion.nav>
       <div className='menuIcon'>
         <AiOutlineMenu onClick={() => handleMenuLink()} />
       </div>

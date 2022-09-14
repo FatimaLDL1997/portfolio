@@ -2,6 +2,9 @@ import React, { useState, useRef, useEffect } from "react";
 import { hobbies } from "../data";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { BsChevronDoubleDown } from "react-icons/bs";
+import { fullScreenAnimation } from "../data";
+import { motion } from "framer-motion";
+
 const Hobbies = () => {
   const [index, setIndex] = useState(1);
   const [clickedLeft, setClickedLeft] = useState(false);
@@ -56,7 +59,12 @@ const Hobbies = () => {
 
   return (
     <>
-      <section className='pageContainer'>
+      <motion.section
+        className='pageContainer'
+        variants={fullScreenAnimation}
+        initial='hidden'
+        animate='show'
+      >
         <div className='titleContainer'>
           <h2 className='pageTitle'>Hobbies</h2>
         </div>
@@ -98,7 +106,7 @@ const Hobbies = () => {
             <AiOutlineRight className='right' onClick={(e) => prevImage(e)} />
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };

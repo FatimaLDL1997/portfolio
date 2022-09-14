@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { projects } from "../data";
 import Project from "./Project";
+import { fullScreenAnimation } from "../data";
+import { motion } from "framer-motion";
+
 const categories = ["all", ...new Set(projects.map((item) => item.category))];
 const Projects = () => {
   const [menuItems, setMenuItems] = useState(projects);
@@ -16,7 +19,12 @@ const Projects = () => {
   };
 
   return (
-    <section className='pageContainer'>
+    <motion.section
+      variants={fullScreenAnimation}
+      initial='hidden'
+      animate='show'
+      className='pageContainer'
+    >
       <div className='titleContainer'>
         <h2 className='pageTitle'>Projects</h2>
       </div>
@@ -43,7 +51,7 @@ const Projects = () => {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
