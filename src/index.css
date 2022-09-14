@@ -74,11 +74,11 @@ code {
   .home-title {
     font-size: 1.3rem !important;
   }
-  .home-prefession {
-    font-size: 1rem !important;
-  }
   .subtitle {
     font-size: 2rem !important;
+  }
+  .home-prefession {
+    font-size: 1.3rem !important;
   }
 }
 /*when its large */
@@ -114,6 +114,7 @@ code {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 3;
+  color: wheat;
 }
 .menuIcon:hover {
   transform: scale(1.5);
