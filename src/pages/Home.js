@@ -95,11 +95,7 @@ const Home = () => {
         A Web Designer {"&"} Engineer
       </motion.h5>
       <img src='/images/bg-img.png' className='my-image' alt='' />
-      <motion.p variants={fadeInZoom} className='home-discription'>
-        I am skilled in slfjsljflskjf slfjlsjflsjfsjflsjglhlf sflsjlfjs
-        shlfjslfj slfjslf fshlgjsljl ls fljslfjs f slfjlsjf sfljsljfl sflslj
-        lsflsjfl
-      </motion.p>
+      <motion.p variants={fadeInZoom} className='home-discription'></motion.p>
     </motion.section>
   );
 };
