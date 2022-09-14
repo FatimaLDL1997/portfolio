@@ -71,14 +71,14 @@ code {
   .zoom-control {
     display: none !important;
   }
+  .home-title {
+    font-size: 1.3rem !important;
+  }
   .home-prefession {
     font-size: 1rem !important;
   }
   .subtitle {
     font-size: 2rem !important;
-  }
-  .home-title {
-    font-size: 1rem !important;
   }
 }
 /*when its large */
