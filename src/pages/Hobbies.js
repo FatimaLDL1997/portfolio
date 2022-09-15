@@ -48,7 +48,7 @@ const Hobbies = () => {
   const [scroll, setScroll] = useState(1);
   useEffect(() => {
     const onScroll = () => {
-      const scrollCheck = window.scrollY > 250;
+      const scrollCheck = window.scrollY > 10;
       setScroll(scrollCheck);
     };
     document.addEventListener("scroll", onScroll);
