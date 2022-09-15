@@ -1,14 +1,28 @@
 import { NavLink } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
-import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { links } from "../data";
-import React from "react";
 
 let count = 0;
 
 const Navbar = () => {
   const [pressed, setPressed] = useState(false);
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    return scrollY.onChange((latest) => {
+      let navbar = document.querySelector(".navbar");
+
+      if (latest > 100) {
+        console.log("here");
+        navbar.classList.add("animate-navbar");
+      } else {
+        navbar.classList.remove("animate-navbar");
+      }
+      console.log("Page scroll: ", latest);
+    });
+  }, []);
 
   const menuRef = useRef(null);
   useEffect(() => {
@@ -33,31 +47,14 @@ const Navbar = () => {
     }
   };
   const animateNav = {
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        ease: "easeIn",
-        staggerChildren: 0.35,
-      },
-    },
-    hidden: {
-      y: -200,
-      opacity: 0,
-    },
-  };
-  const item = {
     hidden: {
       opacity: 0,
-      y: 10,
       transition: {
         when: "afterChildren",
       },
     },
     show: {
       opacity: 1,
-      y: 0,
       transition: {
         ease: "easeInOut",
         duration: 2,
@@ -65,7 +62,6 @@ const Navbar = () => {
     },
     exit: {
       opacity: 0,
-      x: 200,
     },
   };
   return (
@@ -86,10 +82,10 @@ const Navbar = () => {
           );
         })}
       </motion.nav>
+
       <div className='menuIcon'>
         <AiOutlineMenu onClick={() => handleMenuLink()} />
       </div>
-
       <div className='menuContainer'>
         <div ref={menuRef} className='menu'>
           <ul className='links'>

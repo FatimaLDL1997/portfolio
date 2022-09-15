@@ -60,7 +60,7 @@ const Hobbies = () => {
   return (
     <>
       <motion.section
-        className='pageContainer'
+        className=''
         variants={fullScreenAnimation}
         initial='hidden'
         animate='show'

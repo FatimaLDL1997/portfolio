@@ -11,21 +11,6 @@ import SharedLayout from "./pages/SharedLayout";
 import { motion } from "framer-motion";
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    window.addEventListener("load", () => setLoading(false));
-
-    return window.removeEventListener("load", () => setLoading(false));
-  }, []);
-  // if (loading) {
-  //   return (
-  //     <div>
-  //       <img className='preloader' src={gif} alt='' />;
-  //     </div>
-  //   );
-  // }
-
   return (
     <BrowserRouter>
       <Routes>

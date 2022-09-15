@@ -20,6 +20,15 @@ export const fullScreenAnimation = {
       duration: 0.8,
     },
   },
+  whileInView: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.5,
+      ease: "easeInOut",
+      duration: 0.8,
+    },
+  },
   hidden: {
     opacity: 0,
     y: 500,

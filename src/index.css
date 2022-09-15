@@ -13,6 +13,11 @@ body {
 html {
   overflow-x: hidden;
 }
+.page1,
+.container-home {
+  margin: 0px;
+  padding: 0px;
+}
 .video iframe {
   width: auto;
   height: 200px;
@@ -38,12 +43,11 @@ code {
   opacity: 0;
 }
 .navbar {
-  background-color: rgba(115, 163, 184, 0);
   position: fixed;
   height: 4rem;
   width: 100%;
   top: 0px;
-
+  background: rgba(155, 109, 109, 0);
   margin-top: 0;
   left: 50%;
   margin-left: -50%;
@@ -56,6 +60,25 @@ code {
   align-items: center;
   padding: 0;
   /* box-shadow: 4px 0px 13px 2px rgb(0 0 0 / 25%); */
+}
+
+.animate-navbar {
+  animation: fadeIn;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  background: #2b3838;
+  box-shadow: rgb(0 0 0 / 25%);
+}
+li {
+  font-size: 1.5rem;
+}
+@keyframes fadeIn {
+  from {
+    background: #3c4e4e00;
+  }
+  to {
+    background: #3c4e4e;
+  }
 }
 /*when its small */
 @media screen and (max-width: 800px) {
@@ -109,7 +132,7 @@ code {
 .menuIcon {
   position: absolute;
   top: 1rem;
-  right: 3rem;
+  left: 3rem;
   width: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
@@ -256,8 +279,10 @@ li {
   position: absolute;
   margin: 0;
   top: 0;
-  width: 100vw;
   height: 100vh;
+  display: flex;
+
+  width: 100vw;
   z-index: -1;
 }
 .home-title {
@@ -310,9 +335,10 @@ li {
   text-align: center;
   align-items: center;
 }
-/* .pageContainer {
-  padding-top: 4rem;
-} */
+.pageContainer {
+  display: flex;
+  justify-content: center;
+}
 .home-prefession {
   display: flex;
   justify-content: center;
@@ -535,8 +561,8 @@ li {
 }
 .footer {
   position: fixed;
-  bottom: 0.5rem;
-  left: 0.5rem;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 .footer-links {
   font-size: 2rem;
