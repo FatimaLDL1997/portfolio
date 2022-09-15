@@ -1,3 +1,36 @@
+export const animateNav = {
+  show: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.5,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+};
+export const animateNavItems = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+    },
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      ease: "easeInOut",
+      duration: 2.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+  },
+};
 export const fullScreenAnimation = {
   show: {
     opacity: 1,

@@ -31,15 +31,15 @@ const Resume = () => {
     });
   };
 
-  const handleResize = () => {
-    const menuIcon = document.querySelector(".menuIcon").style;
-    const page = document.querySelector(".resume");
-    if (window.innerWidth < 800 && page != null) {
-      menuIcon.color = "white";
-    } else {
-      menuIcon.color = "#2a4855";
-    }
-  };
+  // const handleResize = () => {
+  //   const menuIcon = document.querySelector(".menuIcon").style;
+  //   const page = document.querySelector(".resume");
+  //   if (window.innerWidth < 800 && page != null) {
+  //     menuIcon.color = "white";
+  //   } else {
+  //     menuIcon.color = "#2a4855";
+  //   }
+  // };
   const [zoomCount, setZoomCount] = useState(1);
   const handleZoomOut = () => {
     setZoomCount((zoomCount) => {
@@ -61,16 +61,16 @@ const Resume = () => {
       return zoomCount;
     });
   };
-  useEffect(() => {
-    window.addEventListener("resize", () => handleResize());
+  // useEffect(() => {
+  //   window.addEventListener("resize", () => handleResize());
 
-    return window.removeEventListener("resize", () => handleResize());
-  });
-  useEffect(() => {
-    window.addEventListener("click", () => handleResize());
+  //   return window.removeEventListener("resize", () => handleResize());
+  // });
+  // useEffect(() => {
+  //   window.addEventListener("click", () => handleResize());
 
-    return window.removeEventListener("click", () => handleResize());
-  });
+  //   return window.removeEventListener("click", () => handleResize());
+  // });
 
   return (
     <motion.div

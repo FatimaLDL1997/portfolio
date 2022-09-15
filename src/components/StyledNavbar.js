@@ -3,6 +3,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { links } from "../data";
+import { animateNav, animateNavItems } from "../animations";
 
 let count = 0;
 
@@ -53,39 +54,24 @@ const Navbar = () => {
       document.body.style.overflow = "visible";
     }
   };
-  const animateNav = {
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: "afterChildren",
-      },
-    },
-    show: {
-      opacity: 1,
-      transition: {
-        ease: "easeInOut",
-        duration: 2,
-      },
-    },
-    exit: {
-      opacity: 0,
-    },
-  };
+
   return (
     <>
       <motion.nav
+        className='navbar'
         variants={animateNav}
         initial='hidden'
-        animate='show'
-        className='navbar'
+        whileInView='show'
       >
         {links.map((link) => {
           const { id, url, text } = link;
 
           return (
-            <NavLink className='links' key={id} to={url}>
-              {text}
-            </NavLink>
+            <motion.div key={id} variants={animateNavItems}>
+              <NavLink className='links' to={url}>
+                {text}
+              </NavLink>
+            </motion.div>
           );
         })}
       </motion.nav>

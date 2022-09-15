@@ -31,7 +31,7 @@ html {
   font-style: normal;
   font-weight: 400;
   color: #faedcd;
-  line-height: 2.5rem;
+  line-height: 1.5rem;
 }
 .container-home {
   margin: 0px;
@@ -123,6 +123,12 @@ li {
   .home-prefession {
     font-size: 1.3rem !important;
   }
+  .active {
+    color: #644525 !important;
+    font-weight: 500;
+    transition: 1s ease-in-out;
+    text-decoration: none;
+  }
 }
 /*when its large */
 @media screen and (min-width: 800px) {
@@ -150,18 +156,20 @@ li {
   }
 }
 .menuIcon {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   left: 1.5rem;
   width: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 3;
-  color: wheat;
+  color: #faedcd !important;
 }
 .line {
   width: 20vw;
   border-color: #d4a373;
+  height: 0.5px;
+  background: #cf9e71;
 }
 .menuIcon:hover {
   transform: scale(1.5);
@@ -178,7 +186,7 @@ li {
   position: absolute;
 }
 .menu-fadeOut {
-  background-color: #73a3b8;
+  background-color: #d4a373;
   width: 0vw;
   height: 0rem;
   /* border-radius: 2%; */
@@ -190,7 +198,7 @@ li {
   transition: 1s;
 }
 .menu-fadeIn {
-  background-color: #73a3b8;
+  background-color: #d4a373;
   display: flex;
   animation-fill-mode: forwards;
 
@@ -198,7 +206,7 @@ li {
   text-align: center;
   width: 80vw;
   height: 60vh;
-  /* border-radius: 2%; */
+  border-radius: 2rem;
   animation-name: animateOpacityIn;
   animation-duration: 1s;
   position: absolute;
@@ -276,7 +284,7 @@ li {
   transition: 1s ease-out;
 }
 .active {
-  color: #dbc41c;
+  color: #d4a373;
   font-weight: 500;
   transition: 1s ease-in-out;
   text-decoration: none;
@@ -345,7 +353,7 @@ li {
   top: 0rem;
   text-align: center;
   font-size: 2rem;
-  padding-top: 20vh;
+  padding-top: 15vh;
 }
 .hello {
   position: relative;
@@ -582,14 +590,14 @@ li {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #73a3b8;
+  background: #d4a373;
   border-radius: 10px;
   border: 0.09em solid #def0f2;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #054661c1;
+  background: #2b3838;
 }
 .scroll {
   display: none !important;
@@ -634,25 +642,16 @@ li {
 .footer-links {
   font-size: 1.5rem;
   padding-left: 1rem;
-  color: #8a8579;
 }
-@keyframes scaleUp {
-  from {
-    font-size: 2rem;
-  }
-  to {
-    font-size: 2.5rem;
-  }
-}
+
 .footer-links:hover {
-  color: #c7bca3;
-  animation: scaleUp 2s;
+  color: #fffcf5;
 }
 a {
   text-decoration: none;
   font-size: 10px;
   font-weight: 400;
-  color: #0a2e3d;
+  color: #faedcd;
 }
 .left {
   padding-left: 7vw;

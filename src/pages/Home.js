@@ -59,12 +59,20 @@ const Home = () => {
         variants={animateSkill}
         whileInView='show'
         initial='hidden'
-        style={{ height: "100vh", background: "#404f4f", bottom: "0" }}
+        style={{ height: "100vh", background: "#D4A373", bottom: "0" }}
       >
-        <motion.h1 variants={animateSkillItem} className='subpage-title'>
+        <motion.h1
+          style={{ color: "#404f4f", fontWeight: "900" }}
+          variants={animateSkillItem}
+          className='subpage-title'
+        >
           Top Skills
         </motion.h1>
-        <motion.hr className='line' variants={lineAnimation}></motion.hr>
+        <motion.hr
+          className='line'
+          style={{ color: "#404f4f", height: " 1px", background: "#404f4f" }}
+          variants={lineAnimation}
+        ></motion.hr>
         <div className='skillContainer'>
           <motion.ul
             variants={animateSkill}
@@ -79,6 +87,7 @@ const Home = () => {
                   key={id}
                   variants={animateSkillItem}
                   className='topSkillItem'
+                  style={{ color: "#404f4f", fontWeight: "900" }}
                 >
                   {text}
                 </motion.li>
