@@ -13,12 +13,19 @@ const Navbar = () => {
   useEffect(() => {
     return scrollY.onChange((latest) => {
       let navbar = document.querySelector(".navbar");
+      let links = document.querySelectorAll(".links");
 
       if (latest > 100) {
         console.log("here");
         navbar.classList.add("animate-navbar");
+        for (const link of links) {
+          link.classList.add("animate-links");
+        }
       } else {
         navbar.classList.remove("animate-navbar");
+        for (const link of links) {
+          link.classList.remove("animate-links");
+        }
       }
       console.log("Page scroll: ", latest);
     });

@@ -13,7 +13,26 @@ body {
 html {
   overflow-x: hidden;
 }
-.page1,
+.topSkillContainer {
+  list-style-type: none;
+  text-align: "center";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 0;
+}
+.topSkillItem {
+  padding: 0;
+  margin-left: 0;
+  font-size: 1rem;
+  font-family: "Josefin Slab";
+  font-style: normal;
+  font-weight: 400;
+  color: #faedcd;
+  line-height: 2.5rem;
+}
 .container-home {
   margin: 0px;
   padding: 0px;
@@ -59,9 +78,12 @@ code {
   justify-content: center;
   align-items: center;
   padding: 0;
+  z-index: 5;
   /* box-shadow: 4px 0px 13px 2px rgb(0 0 0 / 25%); */
 }
-
+li {
+  font-size: 1.5rem;
+}
 .animate-navbar {
   animation: fadeIn;
   animation-duration: 2s;
@@ -69,9 +91,7 @@ code {
   background: #2b3838;
   box-shadow: rgb(0 0 0 / 25%);
 }
-li {
-  font-size: 1.5rem;
-}
+
 @keyframes fadeIn {
   from {
     background: #3c4e4e00;
@@ -95,7 +115,7 @@ li {
     display: none !important;
   }
   .home-title {
-    font-size: 1.3rem !important;
+    font-size: 1.8rem !important;
   }
   .subtitle {
     font-size: 2rem !important;
@@ -132,12 +152,16 @@ li {
 .menuIcon {
   position: absolute;
   top: 1rem;
-  left: 3rem;
+  left: 1.5rem;
   width: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 3;
   color: wheat;
+}
+.line {
+  width: 20vw;
+  border-color: #d4a373;
 }
 .menuIcon:hover {
   transform: scale(1.5);
@@ -212,12 +236,25 @@ li {
 
 .links {
   text-decoration: none;
-  color: rgb(255, 255, 255);
   font-size: 1rem;
   display: flex;
   flex-direction: column;
   padding: 0.3rem;
   justify-content: space-evenly;
+  color: #faedcd;
+}
+.animate-links {
+  animation: animateLinks 1s;
+  animation-fill-mode: forwards;
+  color: #d4a373;
+}
+@keyframes animateLinks {
+  from {
+    color: #faedcd;
+  }
+  to {
+    color: #d4a373;
+  }
 }
 .links:hover {
   color: rgb(148, 135, 51);
@@ -234,12 +271,13 @@ li {
   list-style-type: none; /*removes bullet points*/
 }
 .menu-links:hover {
-  color: rgb(6, 34, 69);
+  color: #ebdb5f;
 
   transition: 1s ease-out;
 }
 .active {
-  color: rgb(192, 231, 182);
+  color: #dbc41c;
+  font-weight: 500;
   transition: 1s ease-in-out;
   text-decoration: none;
 }
@@ -292,9 +330,33 @@ li {
   font-weight: 400;
   margin-bottom: 0;
   color: #faedcd;
-  top: 4rem;
+  top: 0rem;
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 20vh;
+}
+.subpage-title {
+  position: relative;
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #d4a373;
+  top: 0rem;
   text-align: center;
   font-size: 2rem;
+  padding-top: 20vh;
+}
+.hello {
+  position: relative;
+  font-family: "Merienda", cursive;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: #faedcd;
+  top: 4rem;
+  text-align: center;
+  font-size: 1.2rem;
   padding-top: 20vh;
 }
 .subtitle {
@@ -303,12 +365,23 @@ li {
   text-align: center;
   font-size: 3rem;
 
-  font-family: "Ibarra Real Nova";
+  font-family: "Italiana", serif;
   font-style: normal;
   font-weight: 400;
 
   margin-bottom: 2rem;
   margin-top: 3.5rem;
+  color: #faedcd;
+}
+.home-prefession {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: "Hubballi";
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 0;
+  line-height: 0.1rem;
   color: #faedcd;
 }
 
@@ -339,29 +412,22 @@ li {
   display: flex;
   justify-content: center;
 }
-.home-prefession {
-  display: flex;
-  justify-content: center;
 
-  font-size: 2rem;
-  font-family: "Hubballi";
-  font-style: normal;
-  font-weight: 400;
-  margin-top: 0;
-  color: #faedcd;
-}
 .home-discription {
   display: flex;
   justify-content: center;
   padding-top: 1rem;
   font-size: 1.5rem;
-  font-family: "Hubballi";
+
+  font-family: "Josefin Slab";
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 0;
   color: #faedcd;
   text-align: center;
-  padding: 3rem;
+  padding: 20vw;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .home-discription:last-child {
   padding-bottom: 15vh;
@@ -561,11 +627,13 @@ li {
 }
 .footer {
   position: fixed;
-  top: 0.5rem;
+  top: 1.2rem;
   right: 0.5rem;
+  z-index: 3;
 }
 .footer-links {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
   color: #8a8579;
 }
 @keyframes scaleUp {

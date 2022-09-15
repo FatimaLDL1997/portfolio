@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { projects } from "../data";
 import Project from "./Project";
-import { fullScreenAnimation } from "../data";
+import { fullScreenAnimation } from "../animations";
 import { motion } from "framer-motion";
 
 const categories = ["all", ...new Set(projects.map((item) => item.category))];

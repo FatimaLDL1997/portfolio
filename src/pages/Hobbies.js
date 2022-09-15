@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { hobbies } from "../data";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { BsChevronDoubleDown } from "react-icons/bs";
-import { fullScreenAnimation } from "../data";
+import { fullScreenAnimation } from "../animations";
 import { motion } from "framer-motion";
 
 const Hobbies = () => {

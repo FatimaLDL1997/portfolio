@@ -10,30 +10,33 @@ import { GiFactory } from "react-icons/gi";
 import { BsPersonCircle } from "react-icons/bs";
 import { AiFillProject } from "react-icons/ai";
 import { TbDeviceComputerCamera } from "react-icons/tb";
-export const fullScreenAnimation = {
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      staggerChildren: 0.5,
-      ease: "easeInOut",
-      duration: 0.8,
-    },
+
+export const topSkills = [
+  {
+    id: 1,
+    text: "JS",
   },
-  whileInView: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      staggerChildren: 0.5,
-      ease: "easeInOut",
-      duration: 0.8,
-    },
+  {
+    id: 2,
+    text: "REACT",
   },
-  hidden: {
-    opacity: 0,
-    y: 500,
+  {
+    id: 3,
+    text: "CSS",
   },
-};
+  {
+    id: 4,
+    text: "HTML",
+  },
+  {
+    id: 5,
+    text: "Arduino",
+  },
+  {
+    id: 6,
+    text: "C & C++",
+  },
+];
 export const links = [
   {
     id: 1,

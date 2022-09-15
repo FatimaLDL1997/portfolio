@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
-import { fullScreenAnimation } from "../data";
+import { fullScreenAnimation } from "../animations";
 import { motion } from "framer-motion";
 
 const Resume = () => {

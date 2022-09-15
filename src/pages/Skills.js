@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { skills } from "../data";
-import { fullScreenAnimation } from "../data";
+import { fullScreenAnimation } from "../animations";
 
 import Skill from "./Skill";
 import { motion } from "framer-motion";
