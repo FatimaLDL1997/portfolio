@@ -3,7 +3,13 @@ import { AiOutlineMenu } from "react-icons/ai";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { links } from "../data";
-import { animateNav, animateNavItems } from "../animations";
+import {
+  animateNav,
+  animateNavItems,
+  fadeInZoom,
+  leftToRight,
+  topDown,
+} from "../animations";
 
 let count = 0;
 
@@ -79,7 +85,12 @@ const Navbar = () => {
       <div className='menuIcon'>
         <AiOutlineMenu onClick={() => handleMenuLink()} />
       </div>
-      <div className='menuContainer'>
+      <motion.div
+        className='menuContainer'
+        variants={animateNav}
+        initial='hidden'
+        animate='show'
+      >
         <div ref={menuRef} className='menu'>
           <ul className='links'>
             {pressed &&
@@ -87,22 +98,24 @@ const Navbar = () => {
                 const { id, url, text } = link;
 
                 return (
-                  <NavLink
-                    className='menu-links'
-                    key={id}
-                    id={id}
-                    to={url}
-                    onClick={() => {
-                      handleMenuLink();
-                    }}
-                  >
-                    {text}
-                  </NavLink>
+                  <motion.div key={id} variants={animateNavItems}>
+                    <NavLink
+                      className='menu-links'
+                      key={id}
+                      id={id}
+                      to={url}
+                      onClick={() => {
+                        handleMenuLink();
+                      }}
+                    >
+                      {text}
+                    </NavLink>
+                  </motion.div>
                 );
               })}
           </ul>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
