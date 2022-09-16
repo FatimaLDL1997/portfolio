@@ -1,7 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { topSkills, topProjects } from "../data";
-import { BsArrowDown } from "react-icons/bs";
+import {
+  BsArrowDown,
+  BsArrowLeftCircleFill,
+  BsArrowRightCircleFill,
+} from "react-icons/bs";
 import {
   fadeIn,
   fadeInZoom,
@@ -13,6 +17,16 @@ import {
 } from "../animations";
 
 const Home = () => {
+  const handleLeftScroll = () => {
+    let container = document.querySelector(".top-project-container");
+    console.log(container);
+    container.scrollBy(30, 0);
+  };
+  const handleRighttScroll = () => {
+    let container = document.querySelector(".top-project-container");
+    console.log(container);
+    container.scrollBy(-30, 0);
+  };
   return (
     <section className='homepages-contianer'>
       <motion.div
@@ -29,8 +43,8 @@ const Home = () => {
           I am Fatima Labade.
         </motion.h5>
         <motion.h5 variants={fadeIn} className='home-prefession'>
-          A Web
-          {"&"} Engineer
+          A Web Developer
+          {" &"} Engineer
         </motion.h5>
         <div className='scroll-down'>
           <BsArrowDown />
@@ -50,10 +64,10 @@ const Home = () => {
         <h1 className='subpage-title'>About Me</h1>
         <motion.hr className='line' variants={lineAnimation}></motion.hr>
         <motion.p variants={animateAboutItem} className='home-discription'>
-          I am a Web Developer {"&"} a Mechatronics Engineer. I have strong
-          skills in Web Developement and Design as well as in Robotics and
-          Embedded Engineering. As a recent graduate, I am looking for a job in
-          either field to jumpstart my career.
+          I am a Web Developer {"&"} a Mechatronics Engineer. I am skilled in
+          Web Developement and Design as well as in Robotics and Embedded
+          Engineering. As a recent graduate, I am looking for a job in either
+          field to jumpstart my career.
         </motion.p>
       </motion.div>
 
@@ -110,18 +124,30 @@ const Home = () => {
         <h1 className='subpage-title'>Top Projects</h1>
         <motion.hr className='line' variants={lineAnimation}></motion.hr>
         <div variants={animateAboutItem} className='top-project-container'>
+          <div className='left-scroll' onClick={() => handleLeftScroll()}>
+            <div className='fixed-container'>
+              <BsArrowRightCircleFill />
+            </div>
+          </div>
+          <div className='right-scroll' onClick={() => handleRighttScroll()}>
+            <div className='fixed-container'>
+              <BsArrowLeftCircleFill />
+            </div>
+          </div>
+
           {topProjects.map((project) => {
             const { text, id, icon, category } = project;
             return (
-              <div
+              <a
                 key={id}
                 variants={animateSkillItem}
                 className='topProjectItem'
+                href={`/projects/${id}`}
               >
                 <div className='image'>{icon}</div>
                 <h1 className='topProjectText'>{text}</h1>
                 <h2 className='topProjectCtgry'>{category}</h2>
-              </div>
+              </a>
             );
           })}
         </div>

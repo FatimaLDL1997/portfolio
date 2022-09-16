@@ -78,28 +78,16 @@ export const topProjects = [
     category: "Embedded",
   },
   {
-    id: 3,
+    id: 6,
     icon: <FaShoppingCart />,
     text: "Grocery Bud",
     category: "Web",
   },
   {
-    id: 1,
-    icon: <FaRobot />,
-    text: "Autonomous Robot",
-    category: "Embedded",
-  },
-  {
-    id: 2,
-    icon: <AiFillCar />,
-    text: "RC Car",
-    category: "Embedded",
-  },
-  {
-    id: 3,
-    icon: <FaShoppingCart />,
-    text: "Grocery Bud",
-    category: "Web",
+    id: 5,
+    icon: <FaCube />,
+    text: "3D Cadded Models",
+    category: "Modelling",
   },
 ];
 
