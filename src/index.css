@@ -13,6 +13,15 @@ body {
 html {
   overflow-x: hidden;
 }
+.icon {
+  width: 3.5rem !important;
+}
+.icon-container {
+  position: fixed;
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 6;
+}
 .topSkillContainer {
   list-style-type: none;
   text-align: "center";
@@ -33,6 +42,26 @@ html {
   color: #faedcd;
   line-height: 2.5rem;
 }
+.topProjectItem {
+  color: "white";
+  font-weight: "900";
+  display: flex;
+  flex-direction: column;
+  margin: "2rem";
+  height: "30vh";
+  padding: "1rem";
+}
+.topProjectText {
+  text-align: center;
+  font-size: "1rem";
+  color: black;
+}
+.image {
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+}
+
 .container-home {
   margin: 0px;
   padding: 0px;
@@ -118,13 +147,13 @@ li {
     font-size: 1.8rem !important;
   }
   .subtitle {
-    font-size: 2rem !important;
+    font-size: 3rem !important;
   }
   .home-prefession {
     font-size: 1.3rem !important;
   }
   .active {
-    color: #644525 !important;
+    color: #e3dfdc !important;
     font-weight: 500;
     transition: 1s ease-in-out;
     text-decoration: none;
@@ -135,6 +164,7 @@ li {
   .menuIcon {
     opacity: 0;
   }
+
   .menuContainer {
     opacity: 0;
     display: none !important;
@@ -189,29 +219,33 @@ li {
   background-color: #d4a373;
   width: 0vw;
   height: 0rem;
-  /* border-radius: 2%; */
+  border-radius: 2%;
   animation-name: animateOpacityOut;
   animation-fill-mode: forwards;
   animation-duration: 1s;
   opacity: 0;
   position: absolute;
   transition: 1s;
+  box-shadow: 4px 0px 13px 2px rgb(0 0 0 / 25%);
 }
 .menu-fadeIn {
   background-color: #d4a373;
   display: flex;
   animation-fill-mode: forwards;
-
   justify-content: center;
   text-align: center;
   width: 80vw;
   height: 60vh;
-  border-radius: 2rem;
+  border: thick;
+  border-style: double;
+  border-color: black;
+  border-radius: 0.5rem;
   animation-name: animateOpacityIn;
   animation-duration: 1s;
-  position: absolute;
+  position: fixed;
   transition: 1s;
   z-index: 2;
+  box-shadow: 4px 0px 13px 12px rgb(0 0 0 / 25%);
 }
 .overlay {
   background-color: gray !important;
@@ -241,7 +275,6 @@ li {
     opacity: 1;
   }
 }
-
 .links {
   text-decoration: none;
   font-size: 1rem;
@@ -250,6 +283,7 @@ li {
   padding: 0.3rem;
   justify-content: space-evenly;
   color: #faedcd;
+  font-family: "Merienda", cursive;
 }
 .animate-links {
   animation: animateLinks 1s;
@@ -273,13 +307,15 @@ li {
 .menu-links {
   font-weight: 400;
   font-size: medium;
-  color: #fafbf2;
+  color: #6a530b;
   padding: 3%;
+  font-family: "Ibarra Real Nova";
   text-decoration: none;
   list-style-type: none; /*removes bullet points*/
+  font-family: "Merienda", cursive;
 }
 .menu-links:hover {
-  color: #ebdb5f;
+  color: #e3dfdc;
 
   transition: 1s ease-out;
 }
@@ -331,6 +367,31 @@ li {
   width: 100vw;
   z-index: -1;
 }
+.scroll-down {
+  position: absolute;
+  color: #faedcd;
+  font-size: 3rem;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 2rem;
+  left: 50vw;
+  animation: scrollDown 2s ease-in-out infinite;
+}
+@keyframes scrollDown {
+  from {
+    /* opacity: 0; */
+    transform: scaleY(1);
+  }
+  to {
+    /* opacity: 1; */
+    transform: scaleY(1.5);
+  }
+}
+.homepages-container {
+  overflow: hidden !important;
+}
 .home-title {
   position: relative;
   font-family: "Hubballi";
@@ -371,9 +432,9 @@ li {
   position: relative;
   top: 1rem;
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: "Montserrat", sans-serif;
 
-  font-family: "Italiana", serif;
   font-style: normal;
   font-weight: 400;
 
@@ -385,7 +446,7 @@ li {
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
-  font-family: "Hubballi";
+  font-family: "Merienda", cursive;
   font-style: normal;
   font-weight: 400;
   margin-top: 0;
@@ -435,7 +496,7 @@ li {
   font-style: normal;
   font-weight: 400;
   margin-top: 0;
-  color: #faedcd;
+  color: #d4a373;
   text-align: center;
   padding: 20vw;
   padding-top: 3rem;
@@ -483,6 +544,10 @@ li {
   position: relative;
   text-align: center;
   padding-top: 0%;
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 400;
+  color: #d4a373;
 }
 
 .hobbiesContainer {
@@ -562,7 +627,6 @@ li {
   max-height: 3rem;
   padding-right: 15px;
   align-items: center;
-  /* box-shadow: 4px 0px 13px 2px rgb(0 0 0 / 25%); */
   min-width: 10rem;
   max-width: 10rem;
   margin: 0.8rem;
@@ -641,8 +705,8 @@ li {
 .footer {
   position: fixed;
   top: 1.2rem;
-  right: 0.5rem;
-  z-index: 3;
+  right: 1.7rem;
+  z-index: 5;
 }
 .footer-links {
   font-size: 1.5rem;
@@ -694,7 +758,7 @@ a {
   font-size: 0.8rem;
   text-transform: capitalize;
   margin: 0.3rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 0rem;
   padding: 0.3rem;
   color: black;
   cursor: pointer;
@@ -769,15 +833,19 @@ a {
 }
 .descText {
   text-align: justify;
-  font-weight: 300;
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 400;
+  color: #faedcd;
   font-size: 1.5rem;
-  font-weight: 200;
 }
 .read-more,
 .read-less {
-  font-weight: 200;
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 400;
+  color: #d4a373;
   font-size: 1.5rem;
-  color: #177eaa;
 }
 .read-more:hover,
 .read-less:hover {
@@ -791,11 +859,22 @@ a {
   justify-content: center;
   font-weight: 400;
   font-size: small;
+
+  font-size: 1.5rem;
+  font-family: "Josefin Slab";
+  font-style: normal;
+  font-weight: 400;
+  color: #faedcd;
 }
 .projectTitle {
   display: flex;
   justify-content: center;
   padding-top: 50px;
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 400;
+  color: #d4a373;
+  font-size: 2rem;
 }
 .projectsContainer {
   text-align: center;
@@ -803,35 +882,6 @@ a {
 .projectImg {
   color: #2d6177;
   font-size: 80px;
-}
-.meter {
-  box-sizing: content-box;
-  height: 18px;
-  position: relative;
-  margin: 8px 0 8px 0;
-  background: #345a6a;
-  /* border-radius: 25px; */
-  padding: 4px;
-  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
-}
-.meter > span {
-  display: block;
-  height: 100%;
-  /* width: 35%; */
-  /* border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px; */
-  background-color: rgb(128 176 197);
-  background-image: linear-gradient(
-    center bottom,
-    rgb(43, 194, 83) 37%,
-    rgb(84, 240, 84) 69%
-  );
-  box-shadow: inset -1px -5px 7px 6px rgb(236 227 227 / 30%),
-    inset 0 -2px 6px rgb(0 0 0 / 40%);
-  position: relative;
-  overflow: hidden;
 }
 .skillIcon {
   height: 2rem;

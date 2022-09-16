@@ -1,15 +1,9 @@
 import { NavLink } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import React, { useState, useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { links } from "../data";
-import {
-  animateNav,
-  animateNavItems,
-  fadeInZoom,
-  leftToRight,
-  topDown,
-} from "../animations";
+import { animateNav, animateNavItems } from "../animations";
 
 let count = 0;
 
@@ -36,7 +30,7 @@ const Navbar = () => {
       }
       console.log("Page scroll: ", latest);
     });
-  }, []);
+  });
 
   const menuRef = useRef(null);
   useEffect(() => {
@@ -63,6 +57,9 @@ const Navbar = () => {
 
   return (
     <>
+      <div className='icon-container'>
+        <img className='icon' src='/images/FLnewLogo.png' alt='' />
+      </div>
       <motion.nav
         className='navbar'
         variants={animateNav}

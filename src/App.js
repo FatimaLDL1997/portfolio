@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
 import Home from "./pages/Home";
 import { Resume } from "./pages/Resume";
 import Skills from "./pages/Skills";
@@ -8,7 +7,6 @@ import Hobbies from "./pages/Hobbies";
 import ProjectItem from "./pages/ProjectItem";
 
 import SharedLayout from "./pages/SharedLayout";
-import { motion } from "framer-motion";
 
 function App() {
   return (

@@ -1,10 +1,11 @@
 import React from "react";
-const Skill = ({ id, progress, text, url }) => {
+
+const Skill = ({ id, text, url }) => {
   return (
     <>
-      <div style={{ marginLeft: "0" }} className='skillItem'>
+      <div key={id} style={{ marginLeft: "0" }} className='skillItem'>
         <div className='skillText'>{text}</div>
-        <img className='skillIcon ' src={url} />
+        <img className='skillIcon ' alt={text} src={url} />
       </div>
     </>
   );

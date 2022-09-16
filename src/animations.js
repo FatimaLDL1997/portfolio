@@ -58,14 +58,12 @@ export const fullScreenAnimation = {
 export const topDown = {
   hidden: {
     opacity: 0,
-    y: 2000,
     transition: {
       when: "afterChildren",
     },
   },
   whileInView: {
     opacity: 1,
-    y: [0, 2],
     transition: {
       ease: "easeInOut",
       duration: 2,

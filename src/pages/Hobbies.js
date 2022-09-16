@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { hobbies } from "../data";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { BsChevronDoubleDown } from "react-icons/bs";
@@ -68,6 +68,10 @@ const Hobbies = () => {
         <div className='titleContainer'>
           <h2 className='pageTitle'>Hobbies</h2>
         </div>
+        <hr
+          className='line'
+          style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
+        ></hr>
         <h4 className='discription'>
           Painting is the best thing to do as a hobby. To me at least. It is
           like travelling to another world when I lose myself to my colours and
@@ -82,7 +86,7 @@ const Hobbies = () => {
             const { id, text, img } = hobby;
             return (
               <div key={id}>
-                {index == id && (
+                {index === id && (
                   <div className='hobbiesContainer'>
                     <h2 className='hobbiesTitle'>{text}</h2>
                     <img

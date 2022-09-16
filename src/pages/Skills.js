@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { skills } from "../data";
 import { fullScreenAnimation } from "../animations";
-
+import { lineAnimation } from "../animations";
 import Skill from "./Skill";
 import { motion } from "framer-motion";
 
@@ -28,6 +28,11 @@ const Skills = () => {
       <div className='titleContainer'>
         <h2 className='pageTitle'>Skills</h2>
       </div>
+      <motion.hr
+        className='line'
+        variants={lineAnimation}
+        style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
+      ></motion.hr>
 
       <div className='projectsContainer'>
         <div className={`btns-container `}>

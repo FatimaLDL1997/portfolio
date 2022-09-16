@@ -1,18 +1,17 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { topSkills } from "../data";
+import { topSkills, topProjects } from "../data";
+import { BsArrowDown } from "react-icons/bs";
 import {
-  topDown,
   fadeIn,
-  leftToRight,
   fadeInZoom,
   animateSkill,
   animateSkillItem,
-  fullScreenAnimation,
   animateAbout,
   animateAboutItem,
   lineAnimation,
 } from "../animations";
+
 const Home = () => {
   return (
     <section className='homepages-contianer'>
@@ -29,9 +28,13 @@ const Home = () => {
         <motion.h5 variants={fadeIn} className='subtitle'>
           I am Fatima Labade.
         </motion.h5>
-        <motion.h5 variants={leftToRight} className='home-prefession'>
-          A Web Developer {"&"} Engineer
+        <motion.h5 variants={fadeIn} className='home-prefession'>
+          A Web
+          {"&"} Engineer
         </motion.h5>
+        <div className='scroll-down'>
+          <BsArrowDown />
+        </div>
         <div className='pageContainer'>
           <img src='/images/bg-img.png' className='my-image' alt='' />
         </div>
@@ -94,6 +97,32 @@ const Home = () => {
               );
             })}
           </motion.ul>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className='container-home'
+        whileInView='show'
+        variants={animateAbout}
+        initial='hidden'
+        style={{ height: "100vh", background: "#404f4f" }}
+      >
+        <h1 className='subpage-title'>Top Projects</h1>
+        <motion.hr className='line' variants={lineAnimation}></motion.hr>
+        <div variants={animateAboutItem} className='top-project-container'>
+          {topProjects.map((project) => {
+            const { text, id, icon } = project;
+            return (
+              <div
+                key={id}
+                variants={animateSkillItem}
+                className='topProjectItem'
+              >
+                <div className='image'>{icon}</div>
+                <h1 className='topProjectText'>{text}</h1>
+              </div>
+            );
+          })}
         </div>
       </motion.div>
     </section>

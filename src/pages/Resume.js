@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
 import { fullScreenAnimation } from "../animations";
 import { motion } from "framer-motion";
@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 const Resume = () => {
   let [numPages, setNumPages] = useState(null);
   let [pageNumber, setPageNumber] = useState(1);
+  console.log(numPages);
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
     setPageNumber(1);

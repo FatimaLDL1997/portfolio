@@ -64,6 +64,14 @@ export const links = [
     text: "Hobbies",
   },
 ];
+export const topProjects = [
+  {
+    id: 1,
+    icon: <FaRobot />,
+    text: "Autonomous Robot",
+    category: "Embedded",
+  },
+];
 
 export const projects = [
   {

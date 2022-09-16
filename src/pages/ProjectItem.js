@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { projects } from "../data";
-
+import { motion } from "framer-motion";
+import { lineAnimation } from "../animations";
 const ProjectItem = () => {
   const { projectId } = useParams();
   const project = projects.find((project) => project.id == projectId);
@@ -15,7 +16,13 @@ const ProjectItem = () => {
   return (
     <section>
       <h1 className='projectTitle'>{text}</h1>
+      <motion.hr
+        className='line'
+        variants={lineAnimation}
+        style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
+      ></motion.hr>
       <h3 className='categoryTitle'>{category}</h3>
+
       <div className='project-discription'>
         <h5 className='descText' id={id}>
           {readMore ? desc : `${desc.substring(0, 150)}...`}
