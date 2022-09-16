@@ -111,7 +111,7 @@ const Home = () => {
         <motion.hr className='line' variants={lineAnimation}></motion.hr>
         <div variants={animateAboutItem} className='top-project-container'>
           {topProjects.map((project) => {
-            const { text, id, icon } = project;
+            const { text, id, icon, category } = project;
             return (
               <div
                 key={id}
@@ -120,6 +120,7 @@ const Home = () => {
               >
                 <div className='image'>{icon}</div>
                 <h1 className='topProjectText'>{text}</h1>
+                <h2 className='topProjectCtgry'>{category}</h2>
               </div>
             );
           })}

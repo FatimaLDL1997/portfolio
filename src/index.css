@@ -14,6 +14,7 @@ html {
   overflow-x: hidden;
 }
 .icon {
+  display: block;
   width: 3.5rem !important;
 }
 .icon-container {
@@ -42,24 +43,52 @@ html {
   color: #faedcd;
   line-height: 2.5rem;
 }
+.top-project-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 1rem;
+  justify-content: center;
+}
 .topProjectItem {
-  color: "white";
+  color: white;
   font-weight: "900";
   display: flex;
   flex-direction: column;
-  margin: "2rem";
-  height: "30vh";
-  padding: "1rem";
+  margin: 0.5rem;
+  min-width: 9rem;
+  min-height: fit-content;
+  padding: 1rem;
+  background: #faedcd;
+  justify-content: center;
+
+  font-size: 1.5rem;
+  font-family: "Josefin Slab";
+  font-style: normal;
+  font-weight: 400;
 }
+.topProjectItem:hover {
+  transform: scale(1.05);
+  transition: 2s;
+  box-shadow: rgb(0 0 0 / 25%);
+}
+
 .topProjectText {
   text-align: center;
-  font-size: "1rem";
+  font-size: 1rem;
   color: black;
+  font-weight: 900;
+}
+.topProjectCtgry {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #5e9393;
+  font-weight: 600;
 }
 .image {
   text-align: center;
-  font-size: 3rem;
-  color: black;
+  font-size: 4rem;
+  color: #907d63;
 }
 
 .container-home {
@@ -131,6 +160,9 @@ li {
 }
 /*when its small */
 @media screen and (max-width: 800px) {
+  .icon {
+    display: none !important;
+  }
   .navbar {
     display: none;
   }
