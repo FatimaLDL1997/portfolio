@@ -124,14 +124,16 @@ const Home = () => {
         <h1 className='subpage-title'>Top Projects</h1>
         <motion.hr className='line' variants={lineAnimation}></motion.hr>
         <div variants={animateAboutItem} className='top-project-container'>
-          <div className='left-scroll' onClick={() => handleLeftScroll()}>
-            <div className='fixed-container'>
-              <BsArrowRightCircleFill />
+          <div className='scroll-container'>
+            <div className='left-scroll' onClick={() => handleLeftScroll()}>
+              <div className='fixed-container'>
+                <BsArrowRightCircleFill />
+              </div>
             </div>
-          </div>
-          <div className='right-scroll' onClick={() => handleRighttScroll()}>
-            <div className='fixed-container'>
-              <BsArrowLeftCircleFill />
+            <div className='right-scroll' onClick={() => handleRighttScroll()}>
+              <div className='fixed-container'>
+                <BsArrowLeftCircleFill />
+              </div>
             </div>
           </div>
 

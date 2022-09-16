@@ -78,7 +78,7 @@ html {
   color: #907d63;
   font-size: 3rem;
   width: 100vw;
-  right: 5%;
+  right: 5vw;
   display: flex;
   z-index: 4;
   height: fit-content;
@@ -90,12 +90,16 @@ html {
   color: #907d63;
   font-size: 3rem;
   width: 100vw;
-  right: 90%;
+  right: 93vw;
   display: flex;
   z-index: 4;
   height: fit-content;
   justify-content: flex-end;
   opacity: 0.5;
+}
+.scroll-container {
+  position: absolute;
+  width: 100vw;
 }
 .fixed-container {
   position: relative;
