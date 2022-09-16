@@ -57,12 +57,11 @@ html {
   display: flex;
   flex-direction: column;
   margin: 0.5rem;
-  min-width: 9rem;
+  min-width: 15rem;
   min-height: fit-content;
   padding: 1rem;
   background: #faedcd;
   justify-content: center;
-
   font-size: 1.5rem;
   font-family: "Josefin Slab";
   font-style: normal;
@@ -71,18 +70,53 @@ html {
 .topProjectItem:hover {
   transform: scale(1.05);
   transition: 2s;
+  background: #b7aa88;
   box-shadow: rgb(0 0 0 / 25%);
 }
+.bottom-footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+.logo-bottom {
+  width: 5rem;
+  padding-bottom: 1rem;
+}
+.bottom-footer h1 span {
+  color: rgb(212, 163, 115);
+  font-weight: 900;
+}
+.bottom-footer h1 {
+  font-size: 1.2rem;
+
+  font-family: "Josefin Slab";
+  font-style: normal;
+  font-weight: 400;
+  color: #faedcd;
+}
+.bottom-footer h2 {
+  font-size: 0.7rem;
+
+  font-family: "Josefin Slab";
+  font-style: normal;
+  font-weight: 400;
+  color: #faedcd;
+}
 .topProjectText {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.8rem;
   color: black;
   font-weight: 900;
 }
 .topProjectCtgry {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   color: #5e9393;
   font-weight: 600;
 }
@@ -225,7 +259,7 @@ li {
   width: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
-  z-index: 3;
+  z-index: 5;
   color: #faedcd !important;
 }
 .line {
@@ -866,7 +900,7 @@ a {
   }
 }
 .descText {
-  text-align: justify;
+  text-align: center;
   font-family: "Ibarra Real Nova";
   font-style: normal;
   font-weight: 400;

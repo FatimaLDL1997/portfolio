@@ -23,6 +23,13 @@ const Home = () => {
           );
         })}
       </footer>
+      <footer className='bottom-footer'>
+        <img src='/images/FLnewLogo.png' className='logo-bottom' alt='' />
+        <h1>
+          Made with love by <span>Fatima Labade</span>
+        </h1>
+        <h2>© 2022 FATIMALABADE - ALL RIGHTS RESERVED</h2>
+      </footer>
     </>
   );
 };
