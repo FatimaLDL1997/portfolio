@@ -100,11 +100,11 @@ html {
   position: absolute;
   width: 100vw;
 }
-.fixed-container {
+/* .fixed-container {
   position: relative;
   top: 7rem;
   z-index: 4;
-}
+} */
 /* .left-scroll:hover {
   cursor: pointer;
   color: #577a7a;
