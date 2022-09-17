@@ -20,12 +20,12 @@ const Home = () => {
   const handleLeftScroll = () => {
     let container = document.querySelector(".top-project-container");
     console.log(container);
-    container.scrollBy(30, 0);
+    container.scrollBy(100, 0);
   };
   const handleRighttScroll = () => {
     let container = document.querySelector(".top-project-container");
     console.log(container);
-    container.scrollBy(-30, 0);
+    container.scrollBy(-100, 0);
   };
   return (
     <section className='homepages-contianer'>
