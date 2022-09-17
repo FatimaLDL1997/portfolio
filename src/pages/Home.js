@@ -126,14 +126,10 @@ const Home = () => {
         <div variants={animateAboutItem} className='top-project-container'>
           <div className='scroll-container'>
             <div className='left-scroll' onClick={() => handleLeftScroll()}>
-              <div className='fixed-container'>
-                <BsArrowRightCircleFill />
-              </div>
+              <BsArrowRightCircleFill />
             </div>
             <div className='right-scroll' onClick={() => handleRighttScroll()}>
-              <div className='fixed-container'>
-                <BsArrowLeftCircleFill />
-              </div>
+              <BsArrowLeftCircleFill />
             </div>
           </div>
 
