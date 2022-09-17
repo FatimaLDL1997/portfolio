@@ -15,18 +15,17 @@ import {
   animateAboutItem,
   lineAnimation,
 } from "../animations";
+import SwiperCore, { Navigation, Scrollbar, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { useEffect } from "react";
+
+SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
 const Home = () => {
-  const handleLeftScroll = () => {
-    let container = document.querySelector(".top-project-container");
-    console.log(container);
-    container.scrollBy(100, 0);
-  };
-  const handleRighttScroll = () => {
-    let container = document.querySelector(".top-project-container");
-    console.log(container);
-    container.scrollBy(-100, 0);
-  };
   return (
     <section className='homepages-contianer'>
       <motion.div
@@ -46,9 +45,6 @@ const Home = () => {
           A Web Developer
           {" &"} Engineer
         </motion.h5>
-        <div className='scroll-down'>
-          <BsArrowDown />
-        </div>
         <div className='pageContainer'>
           <img src='/images/bg-img.png' className='my-image' alt='' />
         </div>
@@ -124,30 +120,32 @@ const Home = () => {
         <h1 className='subpage-title'>Top Projects</h1>
         <motion.hr className='line' variants={lineAnimation}></motion.hr>
         <div variants={animateAboutItem} className='top-project-container'>
-          <div className='scroll-container'>
-            <div className='left-scroll' onClick={() => handleLeftScroll()}>
-              <BsArrowRightCircleFill />
-            </div>
-            <div className='right-scroll' onClick={() => handleRighttScroll()}>
-              <BsArrowLeftCircleFill />
-            </div>
-          </div>
-
-          {topProjects.map((project) => {
-            const { text, id, icon, category } = project;
-            return (
-              <a
-                key={id}
-                variants={animateSkillItem}
-                className='topProjectItem'
-                href={`/projects/${id}`}
-              >
-                <div className='image'>{icon}</div>
-                <h1 className='topProjectText'>{text}</h1>
-                <h2 className='topProjectCtgry'>{category}</h2>
-              </a>
-            );
-          })}
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={3}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSlideChange={() => console.log("slideChange")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {topProjects.map((project) => {
+              const { text, id, icon, category } = project;
+              return (
+                <SwiperSlide key={id}>
+                  <a
+                    variants={animateSkillItem}
+                    className='topProjectItem'
+                    href={`/projects/${id}`}
+                  >
+                    <div className='image'>{icon}</div>
+                    <h1 className='topProjectText'>{text}</h1>
+                    <h2 className='topProjectCtgry'>{category}</h2>
+                  </a>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </motion.div>
     </section>
