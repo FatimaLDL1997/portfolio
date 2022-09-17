@@ -84,20 +84,20 @@ html {
   justify-content: flex-end;
   opacity: 0.5;
 }
-.right-scroll {
+/* .right-scroll {
   position: absolute;
   color: #907d63;
   font-size: 3rem;
-  left: 10vw;
+  right: 93vw;
   display: flex;
   z-index: 4;
   height: fit-content;
   justify-content: flex-end;
   opacity: 0.5;
-}
+} */
 .scroll-container {
-  position: absolute;
-  width: 100vw;
+  /* position: absolute; */
+  /* top: 0rem; */
 }
 .left-scroll:hover {
   cursor: pointer;
