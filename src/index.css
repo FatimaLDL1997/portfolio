@@ -73,7 +73,50 @@ html {
   background: #b7aa88;
   box-shadow: rgb(0 0 0 / 25%);
 }
+/* .left-scroll {
+  position: absolute;
+  color: #907d63;
+  font-size: 3rem;
+  right: 5vw;
+  display: flex;
+  z-index: 4;
+  height: fit-content;
+  justify-content: flex-end;
+  opacity: 0.5;
+} */
+/* .right-scroll {
+  position: absolute;
+  color: #907d63;
+  font-size: 3rem;
+  right: 93vw;
+  display: flex;
+  z-index: 4;
+  height: fit-content;
+  justify-content: flex-end;
+  opacity: 0.5;
+} */
 
+.scroll-container {
+  position: absolute;
+  width: 100vw;
+}
+.fixed-container {
+  position: relative;
+  top: 7rem;
+  z-index: 4;
+}
+/* .left-scroll:hover {
+  cursor: pointer;
+  color: #577a7a;
+  transition: 1s;
+  opacity: 1;
+}
+.right-scroll:hover {
+  cursor: pointer;
+  color: #577a7a;
+  transition: 1s;
+  opacity: 1;
+} */
 .bottom-footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
