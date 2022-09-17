@@ -28,7 +28,7 @@ const Navbar = () => {
           link.classList.remove("animate-links");
         }
       }
-      console.log("Page scroll: ", latest);
+      // console.log("Page scroll: ", latest);
     });
   });
 

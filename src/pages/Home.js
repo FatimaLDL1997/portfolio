@@ -21,11 +21,31 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
 const Home = () => {
+  const [size, setSize] = useState(window.innerWidth);
+  const [smallScreen, setSmallScreen] = useState(false);
+  const checkSize = () => {
+    setSize(window.innerWidth);
+    if (window.innerWidth < 800) {
+      setSmallScreen(true);
+    } else if (window.innerWidth >= 800) {
+      setSmallScreen(false);
+    }
+    console.log(" " + smallScreen);
+
+    return () => {
+      window.removeEventListener("remove", checkSize);
+    };
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", checkSize);
+  });
+
   return (
     <section className='homepages-contianer'>
       <motion.div
@@ -121,8 +141,8 @@ const Home = () => {
         <motion.hr className='line' variants={lineAnimation}></motion.hr>
         <div variants={animateAboutItem} className='top-project-container'>
           <Swiper
-            spaceBetween={50}
-            slidesPerView={3}
+            spaceBetween={100}
+            slidesPerView={smallScreen ? 2 : 3}
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
