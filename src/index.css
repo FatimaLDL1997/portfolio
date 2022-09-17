@@ -74,30 +74,30 @@ html {
   box-shadow: rgb(0 0 0 / 25%);
 }
 .left-scroll {
-  /* position: absolute; */
+  position: absolute;
   color: #907d63;
   font-size: 3rem;
-  /* left: 10%; */
+  left: 90vw;
   display: flex;
   z-index: 4;
   height: fit-content;
   justify-content: flex-end;
   opacity: 0.5;
 }
-/* .right-scroll {
+.right-scroll {
   position: absolute;
   color: #907d63;
   font-size: 3rem;
-  right: 93vw;
+  left: 10vw;
   display: flex;
   z-index: 4;
   height: fit-content;
   justify-content: flex-end;
   opacity: 0.5;
-} */
+}
 .scroll-container {
   position: absolute;
-  /* top: 0rem; */
+  width: 100vw;
 }
 .left-scroll:hover {
   cursor: pointer;
