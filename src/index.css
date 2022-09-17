@@ -77,7 +77,7 @@ html {
   position: absolute;
   color: #907d63;
   font-size: 3rem;
-  left: 90vw;
+  /* left: 90vw; */
   display: flex;
   z-index: 4;
   height: fit-content;
