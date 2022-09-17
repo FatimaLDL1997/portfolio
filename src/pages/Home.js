@@ -141,7 +141,7 @@ const Home = () => {
         <motion.hr className='line' variants={lineAnimation}></motion.hr>
         <div variants={animateAboutItem} className='top-project-container'>
           <Swiper
-            spaceBetween={100}
+            spaceBetween={40}
             slidesPerView={smallScreen ? 2 : 3}
             navigation
             pagination={{ clickable: true }}

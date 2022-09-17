@@ -69,13 +69,13 @@ html {
 }
 .topProjectText {
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: black;
   font-weight: 900;
 }
 .topProjectCtgry {
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   color: #5e9393;
   font-weight: 600;
 }
