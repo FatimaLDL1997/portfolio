@@ -62,10 +62,22 @@ html {
   padding: 0.5rem;
   background: #faedcd;
   justify-content: center;
-  font-size: 1.5rem;
+  /* font-size: 1rem; */
   font-family: "Josefin Slab";
   font-style: normal;
   font-weight: 400;
+}
+.topProjectText {
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  font-weight: 900;
+}
+.topProjectCtgry {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #5e9393;
+  font-weight: 600;
 }
 .topProjectItem:hover {
   transition: 2s;
@@ -133,18 +145,7 @@ html {
   font-weight: 400;
   color: #faedcd;
 }
-.topProjectText {
-  text-align: center;
-  font-size: 1.8rem;
-  color: black;
-  font-weight: 900;
-}
-.topProjectCtgry {
-  text-align: center;
-  font-size: 1.5rem;
-  color: #5e9393;
-  font-weight: 600;
-}
+
 .image {
   text-align: center;
   font-size: 4rem;
