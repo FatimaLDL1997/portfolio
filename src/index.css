@@ -57,10 +57,9 @@ html {
   font-weight: "900";
   display: flex;
   flex-direction: column;
-  margin: 0.5rem;
-  min-width: 15rem;
-  min-height: fit-content;
-  padding: 1rem;
+  margin: 0 auto;
+  /* min-width: 10rem; */
+  padding: 0.5rem;
   background: #faedcd;
   justify-content: center;
   font-size: 1.5rem;
