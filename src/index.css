@@ -77,8 +77,8 @@ html {
   position: absolute;
   color: #907d63;
   font-size: 3rem;
-  width: 100vw;
-  /* right: 5vw; */
+  /* width: 10vw; */
+  right: 5vw;
   display: flex;
   z-index: 4;
   height: fit-content;
@@ -89,8 +89,8 @@ html {
   position: absolute;
   color: #907d63;
   font-size: 3rem;
-  width: 100vw;
-  /* right: 93vw; */
+  /* width: 10vw; */
+  right: 93vw;
   display: flex;
   z-index: 4;
   height: fit-content;
