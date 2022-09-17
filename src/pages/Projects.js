@@ -12,7 +12,7 @@ const Projects = () => {
   const filterItems = (item) => {
     if (item === "all") {
       setMenuItems(projects);
-      // console.log(menuItems);
+      console.log(menuItems);
       return;
     }
     const newItems = projects.filter((project) => project.category === item);
