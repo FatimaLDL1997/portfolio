@@ -97,8 +97,8 @@ html {
 } */
 
 .scroll-container {
-  position: absolute;
-  width: 100vw;
+  /* position: absolute; */
+  /* width: 100vw; */
 }
 /* .fixed-container {
   position: relative;
