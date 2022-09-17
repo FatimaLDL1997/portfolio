@@ -49,7 +49,7 @@ html {
   flex-wrap: nowrap;
   padding: 1rem;
   justify-content: flex-start;
-  overflow-x: scroll !important;
+  /* overflow-x: scroll !important; */
   overflow-y: hidden !important;
 }
 .topProjectItem {
