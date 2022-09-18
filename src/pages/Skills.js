@@ -32,7 +32,7 @@ const Skills = () => {
 
   useEffect(() => {
     window.addEventListener("resize", checkSize);
-  });
+  }, []);
 
   const [menuItems, setMenuItems] = useState(skills);
 
