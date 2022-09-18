@@ -65,7 +65,7 @@ const Skills = () => {
         <div className={`btns-container `}>
           <Swiper
             spaceBetween={smallScreen ? 5 : 10}
-            slidesPerView={smallScreen ? 3 : 6}
+            slidesPerView={smallScreen ? 2 : 6}
             navigation
             onSlideChange={() => console.log("slideChange")}
             onSwiper={(swiper) => console.log(swiper)}
