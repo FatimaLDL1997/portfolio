@@ -1,12 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { skills } from "../data";
 import { fullScreenAnimation } from "../animations";
 import { lineAnimation } from "../animations";
 import Skill from "./Skill";
 import { motion } from "framer-motion";
 
+import SwiperCore, { Navigation, Scrollbar, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
+SwiperCore.use([Navigation, Pagination, Scrollbar]);
+
 const categories = ["all", ...new Set(skills.map((item) => item.category))];
 const Skills = () => {
+  const [smallScreen, setSmallScreen] = useState(false);
+  const checkSize = () => {
+    if (window.innerWidth < 800) {
+      setSmallScreen(true);
+    } else if (window.innerWidth >= 800) {
+      setSmallScreen(false);
+    }
+    console.log(" " + smallScreen);
+
+    return () => {
+      window.removeEventListener("remove", checkSize);
+    };
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", checkSize);
+  });
+
   const [menuItems, setMenuItems] = useState(skills);
 
   const filterItems = (item) => {
@@ -36,24 +63,47 @@ const Skills = () => {
 
       <div className='projectsContainer'>
         <div className={`btns-container `}>
-          {categories.map((item, index) => {
-            return (
-              <button
-                className={"category-btn"}
-                type='button'
-                onClick={() => filterItems(item)}
-                key={index}
-                id={index}
-              >
-                {item}
-              </button>
-            );
-          })}
+          <Swiper
+            spaceBetween={smallScreen ? 5 : 10}
+            slidesPerView={smallScreen ? 3 : 6}
+            navigation
+            onSlideChange={() => console.log("slideChange")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {categories.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <button
+                    className={"category-btn"}
+                    type='button'
+                    onClick={() => filterItems(item)}
+                    id={index}
+                    key={index}
+                  >
+                    {item}
+                  </button>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
+
         <div className='section-center-skills'>
-          {menuItems.map((skill) => {
-            return <Skill key={skill.id} {...skill}></Skill>;
-          })}
+          <Swiper
+            spaceBetween={smallScreen ? 10 : 25}
+            slidesPerView={smallScreen ? 2 : 6}
+            navigation
+            onSlideChange={() => console.log("slideChange")}
+            onSwiper={(swiper) => console.log(swiper)}
+          >
+            {menuItems.map((skill) => {
+              return (
+                <SwiperSlide>
+                  <Skill key={skill.id} {...skill}></Skill>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </div>
     </motion.section>

@@ -47,7 +47,7 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: 1rem;
+  padding: 3rem;
   justify-content: flex-start;
   overflow-x: scroll !important;
   overflow-y: hidden !important;
@@ -86,14 +86,27 @@ html {
 }
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: rgb(213, 154, 52);
-  font-weight: bolder;
+  color: #d4a373 !important;
+  font-weight: bold;
+  font-size: 1rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem !important;
+  height: 1.8rem !important;
+  background: #637878;
+  border-radius: 100% !important;
+  opacity: 0.7;
 }
 .swiper-button-next:hover::after,
 .swiper-button-prev:hover::after {
-  color: #905f0a;
-  transform: scale(1.2);
+  font-weight: bolder;
+  opacity: 1;
   transition: 0.9s ease-in-out;
+}
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0 !important;
 }
 .swiper-scrollbar-drag {
   background: #d4a373 !important;
@@ -120,6 +133,10 @@ html {
   justify-content: center;
   align-items: center;
   background: black;
+  position: relative;
+  bottom: 0;
+  height: 20vh;
+  width: 100vw;
 }
 .logo-bottom {
   width: 5rem;
@@ -180,6 +197,7 @@ code {
   padding: 20%;
   opacity: 0;
 }
+
 .navbar {
   position: fixed;
   height: 4rem;
@@ -704,28 +722,25 @@ li {
   padding-bottom: 10px;
 }
 .skillText {
-  font-weight: 400;
+  font-weight: 900;
   font-size: 1.2rem;
   padding: 1%;
-  padding-right: 1rem;
 }
 
 .skillItem {
+  color: rgb(28, 7, 7);
   display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 6rem;
+  min-height: 5rem;
+
+  padding: 0.5rem;
   background: #faedcd;
-  border-radius: 1.2rem;
-  padding: 0.5px;
-  padding-left: 15px;
-  min-height: 3rem;
-  max-height: 3rem;
-  padding-right: 15px;
+  justify-content: center;
+  font-family: "Josefin Slab";
+  font-style: normal;
   align-items: center;
-  min-width: 10rem;
-  max-width: 10rem;
-  margin: 0.8rem;
-  justify-content: space-between;
 }
 .skillItem:hover {
   transition: 1s ease-in-out;
@@ -737,7 +752,7 @@ li {
 .skillsText {
   list-style-type: none;
   font-weight: 300;
-  font-size: 5vh;
+  font-size: 5rem;
   padding-bottom: 10px;
   text-decoration: none;
 }
@@ -853,7 +868,7 @@ a {
   background: #d4a373;
   font-size: 0.8rem;
   text-transform: capitalize;
-  margin: 0.3rem 1rem;
+  margin: 0.3rem 0rem;
   border-radius: 0rem;
   padding: 0.3rem;
   color: black;
@@ -886,17 +901,10 @@ a {
   gap: 2rem 2rem;
 }
 .section-center-skills {
-  display: flex;
-  padding-bottom: 99px;
-  position: relative;
   z-index: 3;
-  flex-wrap: wrap;
-  align-content: stretch;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 10rem !important;
 }
 .projectItem {
   background-color: #faedcd;

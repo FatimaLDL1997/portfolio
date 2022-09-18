@@ -22,14 +22,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useEffect, useState } from "react";
-
 SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
 const Home = () => {
-  const [size, setSize] = useState(window.innerWidth);
   const [smallScreen, setSmallScreen] = useState(false);
   const checkSize = () => {
-    setSize(window.innerWidth);
     if (window.innerWidth < 800) {
       setSmallScreen(true);
     } else if (window.innerWidth >= 800) {
