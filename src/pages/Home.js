@@ -11,6 +11,7 @@ import {
   lineAnimation,
 } from "../animations";
 
+import { HiOutlineExternalLink } from "react-icons/hi";
 import { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -155,11 +156,17 @@ const Home = () => {
               const { text, id, icon, category } = project;
               return (
                 <SwiperSlide key={id}>
-                  <a href='' className='topProjectItem'>
-                    <div className='image'>{icon}</div>
-                    <h1 className='topProjectText'>{text}</h1>
-                    <h2 className='topProjectCtgry'>{category}</h2>
-                  </a>
+                  <div key={id} className='projectItem'>
+                    <div className='projectText'>
+                      <div className='projectImgContainer'>
+                        <i className='projectImg'>{icon}</i>
+                      </div>
+                      {text}
+                    </div>
+                    <a className='go-to' href={`/projects/${id}`}>
+                      <HiOutlineExternalLink />
+                    </a>
+                  </div>
                 </SwiperSlide>
               );
             })}

@@ -17,6 +17,10 @@ html {
   display: block;
   width: 3.5rem !important;
 }
+.go-to {
+  font-size: 1.5rem;
+  color: #404f4f;
+}
 .icon-container {
   position: fixed;
   left: 0.5rem;
@@ -56,7 +60,8 @@ html {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-width: 10rem;
+  min-width: 20rem;
+  min-height: 20rem;
   padding: 0.5rem;
   justify-content: center;
   font-size: 1rem;
@@ -575,9 +580,11 @@ li {
   justify-content: center;
   margin: 1rem;
   padding: 0px;
-  padding-top: 4rem;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-top: 8rem;
+  padding-left: 4rem;
+  padding-bottom: 8rem;
+  padding-left: 56px;
+  padding-right: 4rem;
   text-align: center;
 }
 .project-discription {
@@ -673,7 +680,7 @@ li {
   color: #faedcd;
 }
 .image-carousal {
-  padding-bottom: 120px;
+  padding-bottom: 25rem;
 }
 .hobbiesImg {
   /* border-radius: 2rem; */
@@ -730,9 +737,8 @@ li {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-width: 8rem;
-  min-height: 8rem;
-
+  min-width: 12rem;
+  min-height: 13rem;
   padding: 0.5rem;
   background: #faedcd;
   justify-content: center;
@@ -891,7 +897,7 @@ a {
 
   flex-direction: row;
   justify-content: center;
-  padding-bottom: 99px;
+  padding-bottom: 25rem;
   position: relative;
   z-index: 3;
   padding-left: 9vw;
@@ -902,7 +908,7 @@ a {
   z-index: 3;
   padding-left: 3rem;
   padding-right: 3rem;
-  padding-bottom: 10rem !important;
+  padding-bottom: 25rem !important;
 }
 .projectItem {
   color: rgb(28, 7, 7);
@@ -925,7 +931,7 @@ a {
   animation-fill-mode: forwards;
   /* transform: scale(1.1); */
   transition: 2s ease-in-out;
-  cursor: pointer;
+  /* cursor: pointer; */
   -webkit-box-shadow: 8px 8px 8px -3px rgba(0, 0, 0, 0.25);
   box-shadow: 10px 16px 19px 1px rgb(0 0 0 / 25%);
 }
@@ -987,7 +993,7 @@ a {
   text-align: center;
 }
 .projectImg {
-  color: #2d6177;
+  color: #d4a373;
   font-size: 80px;
 }
 .skillIcon {

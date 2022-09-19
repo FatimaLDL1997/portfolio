@@ -5,14 +5,16 @@ import { lineAnimation } from "../animations";
 import Skill from "./Skill";
 import { motion } from "framer-motion";
 
-import SwiperCore, { Navigation, Scrollbar, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "swiper/css/effect-coverflow";
+import "../styles/homeStyle.css";
+import SwiperCore, { EffectCoverflow, Pagination, Navigation } from "swiper";
 
-SwiperCore.use([Navigation, Pagination, Scrollbar]);
+SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const categories = ["all", ...new Set(skills.map((item) => item.category))];
 const Skills = () => {
@@ -104,11 +106,18 @@ const Skills = () => {
 
         <div className='section-center-skills'>
           <Swiper
-            spaceBetween={5}
-            slidesPerView={window.innerWidth < 300 ? 2 : "auto"}
-            navigation
-            onSlideChange={() => console.log("slideChange")}
-            onSwiper={(swiper) => console.log(swiper)}
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 6,
+              slideShadows: true,
+            }}
+            className='swiper-slide-skills'
           >
             {menuItems.map((skill) => {
               return (

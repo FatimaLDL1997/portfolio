@@ -1,14 +1,19 @@
 import React from "react";
+import { HiOutlineExternalLink } from "react-icons/hi";
+
 const Project = ({ id, icon, text }) => {
   return (
-    <a key={id} className='projectItem' href={`/projects/${id}`}>
+    <div key={id} className='projectItem'>
       <div className='projectText'>
         <div className='projectImgContainer'>
           <i className='projectImg'>{icon}</i>
         </div>
         {text}
       </div>
-    </a>
+      <a className='go-to' href={`/projects/${id}`}>
+        <HiOutlineExternalLink />
+      </a>
+    </div>
   );
 };
 

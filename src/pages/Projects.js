@@ -90,11 +90,18 @@ const Projects = () => {
         </div>
         <div className='section-center'>
           <Swiper
-            spaceBetween={5}
-            slidesPerView={window.innerWidth < 300 ? 1 : "auto"}
-            navigation
-            onSlideChange={() => console.log("slideChange")}
-            onSwiper={(swiper) => console.log(swiper)}
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 6,
+              slideShadows: true,
+            }}
+            className='swiper-slide-skills'
           >
             {menuItems.map((project) => {
               return (
