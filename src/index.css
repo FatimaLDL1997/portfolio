@@ -34,7 +34,20 @@ html {
 .go-to-web:hover {
   color: #cfc4b4;
 }
-.icon-container {
+
+.go-to-skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #373928;
+}
+.go-to-skills:hover {
+  transform: scale(1.2);
+  color: #3a2408;
+  transition: ease-in-out 1s;
+}
+.icon-container a {
   position: fixed;
   left: 0.5rem;
   top: 0.5rem;

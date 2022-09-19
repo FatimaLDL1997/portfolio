@@ -156,7 +156,7 @@ export const projects = [
     text: "Portfolio Website",
     category: "Web",
     vid: "",
-    desc: "This was my first portfolio webpage prior to the one you were on just few seconds ago. Unlike the most recent portfolio I have which utelises React, this website only uses Vanilla JS, HTML5 and CSS3. \n\n I started out with Figma to visualize the design and to figure out how to place all the elements together. I made sure it is responsive to all different screen sizes. I also made sure it is easy to navigate through it no matter which device you are on. \n\n Feel free to click on the website link below, to see how improved this website is, which you are currently on, now that I am using React. \n\n",
+    desc: "This was my first portfolio webpage prior to the one you are currently on. Unlike the most recent portfolio I have which utelises React, this website only uses Vanilla JS, HTML5 and CSS3. \n\n I started out with Figma to visualize the design and to figure out how to place all the elements together. I made sure it is responsive to all different screen sizes. I also made sure it is easy to navigate through it no matter which device you are on. \n\n Feel free to click on the website link below, to see how improved this website is, which you are currently on, now that I am using React. \n\n",
     url: "https://fatima-labade.netlify.app/page3.html#",
   },
 ];

@@ -12,6 +12,7 @@ import {
 } from "../animations";
 
 import { HiOutlineExternalLink } from "react-icons/hi";
+import { GrFormNextLink } from "react-icons/gr";
 import { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -125,6 +126,9 @@ const Home = () => {
               );
             })}
           </motion.ul>
+          <a className='go-to-skills' href='/skills'>
+            See More
+          </a>
         </div>
       </motion.div>
 
