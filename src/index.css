@@ -1010,7 +1010,7 @@ a {
   text-align: center;
 }
 .resume-header {
-  padding-top: 1.5rem;
+  padding-top: 3.5rem;
   background-color: #404f4f;
   min-height: 100vh;
   display: flex;
@@ -1127,6 +1127,6 @@ a {
 }
 .react-pdf__Page__canvas {
   margin: 0 auto;
-  width: 90% !important;
+  width: 100% !important;
   height: 100% !important;
 }
