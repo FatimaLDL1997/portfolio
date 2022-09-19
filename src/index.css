@@ -18,8 +18,21 @@ html {
   width: 3.5rem !important;
 }
 .go-to {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #404f4f;
+}
+.go-to:hover {
+  color: #d8a15f;
+  transform: scale(1.1);
+  transition: all 0.3s linear;
+}
+.go-to-web {
+  font-size: 1.5rem;
+  color: #dab272;
+  transition: all 0.3s linear;
+}
+.go-to-web:hover {
+  color: #cfc4b4;
 }
 .icon-container {
   position: fixed;
@@ -309,16 +322,27 @@ li {
   z-index: 5;
   color: #faedcd !important;
 }
+.x-icon {
+  position: fixed;
+  /* top: 1rem;
+  left: 1.5rem;
+  width: 1rem; */
+  /* cursor: pointer; */
+  z-index: 5;
+  color: #faedcd !important;
+}
+.menuIcon:hover,
+.x-icon:hover {
+  color: #d4ae6f !important;
+  transition: 0.5s ease-in-out;
+}
 .line {
   width: 20vw;
   border-color: #d4a373;
   height: 0.5px;
   background: #cf9e71;
 }
-.menuIcon:hover {
-  transform: scale(1.5);
-  transition: 0.9s;
-}
+
 .menuContainer {
   display: flex;
   justify-content: center;
@@ -823,7 +847,8 @@ li {
 }
 
 .footer-links:hover {
-  color: #fffcf5;
+  color: #baa472;
+  transition: 1s;
 }
 a {
   text-decoration: none;
@@ -930,6 +955,7 @@ a {
   font-weight: 400;
   color: #faedcd;
   font-size: 1.5rem;
+  white-space: pre-line;
 }
 .read-more,
 .read-less {
@@ -942,7 +968,7 @@ a {
 .read-more:hover,
 .read-less:hover {
   cursor: pointer;
-  color: rgb(12, 60, 52);
+  color: #dec1a3;
   transition: all 0.3s linear;
 }
 

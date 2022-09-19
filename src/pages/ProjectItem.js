@@ -7,7 +7,7 @@ import { lineAnimation } from "../animations";
 const ProjectItem = () => {
   const { projectId } = useParams();
   const project = projects.find((project) => project.id == projectId);
-  const { id, vid, category, text, desc } = project;
+  const { id, vid, category, url, text, desc } = project;
   const handleRead = () => {
     setReadMore(!readMore);
   };
@@ -25,13 +25,22 @@ const ProjectItem = () => {
 
       <div className='project-discription'>
         <h5 className='descText' id={id}>
-          {readMore ? desc : `${desc.substring(0, 150)}...`}
+          {readMore ? desc : `${desc.substring(0, 70)}...`}
 
           <span className={`read-more`} onClick={() => handleRead()}>
             {readMore ? " read less" : " read more"}
           </span>
+
           {"."}
         </h5>
+        {url ? (
+          <a href={url} className='go-to-web'>
+            - Visit Site -
+          </a>
+        ) : (
+          ""
+        )}
+
         <div className='video'>
           <iframe
             width='560'

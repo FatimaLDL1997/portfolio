@@ -3,7 +3,7 @@ export const animateNav = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
     },
   },
   hidden: {
@@ -24,7 +24,7 @@ export const animateNavItems = {
     opacity: 1,
     transition: {
       ease: "easeInOut",
-      duration: 2.5,
+      duration: 1,
     },
   },
   exit: {

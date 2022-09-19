@@ -98,7 +98,7 @@ export const projects = [
     text: "Autonomous Robot",
     category: "Embedded",
     vid: "https://www.youtube.com/embed/b1aJYZsqKdw",
-    desc: "In the last year of my Mechatronics Engineering program, I got to build and program an amazing robotic project that combines Arduino and Python programming together. The robot's goal is to autonomously find & pick 2 small dark green and 2 big light green Legos and place them at different locations based on their sizes/colours. Then return home. The robot was able to complete its tasks within the time limit given and return exactly where it started out.",
+    desc: `In the last year of my Mechatronics Engineering program, I got to build and program an amazing robotics project that combines Arduino and Python programming together. \n\n The robot's goal is to autonomously find & pick 2 small dark green and 2 big light green Legos and place them at different locations based on their sizes/colours. Then return home. \n\n The robot was able to complete its tasks within the time limit given and return exactly where it started out.`,
   },
   {
     id: 2,
@@ -106,7 +106,7 @@ export const projects = [
     text: "Bluetooth RC Car",
     category: "Embedded",
     vid: "https://www.youtube.com/embed/_VZ0PIWQRv4",
-    desc: "RC Car Inspired by DIY RC Cars online, I created my own from scratch using Arduino, 2 back gear motors, Adafruit Motor shield and a simplified steering mechanism.The first prototype of this project was made from cardboard. Later, I got to use a laser cutter and a 3D printer to create a nicer and stronger wheel attachment, chassis, and steering mechanism. The car can be controlled using any smart phone once the 'car controller' app, which I created using MIT App Inventor 2, is downloaded.",
+    desc: "RC Car Inspired by DIY RC Cars online, I created my own from scratch using Arduino, 2 back gear motors, Adafruit Motor shield and a simplified steering mechanism. \n\n The first prototype of this project was made from cardboard. Later, I got to use a laser cutter and a 3D printer to create a nicer and stronger wheel attachment, chassis, and steering mechanism. \n\n The car can be controlled using any smart phone once the 'car controller' app, which I created using MIT App Inventor 2, is downloaded.",
   },
   {
     id: 3,
@@ -114,7 +114,7 @@ export const projects = [
     text: "Factory I/O Simulations",
     category: "Manufacturing",
     vid: "https://www.youtube.com/embed/GX4YVvpWhGs",
-    desc: "Factory I/O is a software that provides more than 20 scenes inspired by real world control tasks in factories and warehouses. It also provides the user with flexibility to create their own control tasks. These control systems in Factory I/O can be controlled using many different drivers including but not limited to all PLC brands and common automation technologies in the market. For my Factory I/O projects, I used WinSPS-S7, which is a programming and simulation software that can be connected to Factory I/O for simulation, and can allow the use of LAD, STL and FBD programming languages. I also used block coding in the Control I/O driver to program some of other scenes. ",
+    desc: "Factory I/O is a software that provides more than 20 scenes inspired by real world control tasks in factories and warehouses. It also provides the user with flexibility to create their own control tasks. \n\n These control systems in Factory I/O can be controlled using many different drivers including but not limited to all PLC brands and common automation technologies in the market. \n\n For my Factory I/O projects, I used WinSPS-S7, which is a programming and simulation software that can be connected to Factory I/O for simulation, and can allow the use of LAD, STL and FBD programming languages. I also used block coding in the Control I/O driver to program some of other scenes. \n\n\n Feel free to check out the demo video below: \n\n ",
   },
   {
     id: 4,
@@ -122,7 +122,7 @@ export const projects = [
     text: "Python Security Camera",
     category: "Security",
     vid: "https://www.youtube.com/embed/P8fikhLsUjo",
-    desc: " I coded a Python Security Camera app which uses scikit-image, a collection of algorithms and a part of the image processing in Python, Scikit-image can be used for computing the mean structural similarity index between current and previous image frames which is how motion can be detected in a video.  The application gives the user time to leave the space so that the detection doesn’t start right away by setting up a timer. Once the timer is done counting down, comparison between image frames will start and, thus, any motion detection will be sent over text to the user immediately. Also, if any motion is detected, a video recording of that instance will be stored in the security camera file under ‘output.avi’.",
+    desc: " I coded a Python Security Camera app which uses scikit-image, a collection of algorithms and a part of the image processing in Python, Scikit-image can be used for computing the mean structural similarity index between current and previous image frames which is how motion can be detected in a video.  \n\n The application gives the user time to leave the space so that the detection doesn’t start right away by setting up a timer. Once the timer is done counting down, comparison between image frames will start and, thus, any motion detection will be sent over text to the user immediately. \n\n Also, if any motion is detected, a video recording of that instance will be stored in the security camera file under ‘output.avi’.  \n\n\n Feel free to check out the demo video below: \n\n ",
   },
   {
     id: 5,
@@ -130,7 +130,7 @@ export const projects = [
     text: "3D Cadded Models",
     category: "Modelling",
     vid: "https://www.youtube.com/embed/IklHF9jQogU",
-    desc: "I have created many 3D models during my studies and some of the best are the ones shown in the videos. To know more about the refregirator project you can click ",
+    desc: "I have created many 3D models during my studies. Some of the best are the ones shown in the video below: ",
   },
   {
     id: 6,
@@ -138,7 +138,7 @@ export const projects = [
     text: "Grocery Bud",
     category: "Web",
     vid: "",
-    desc: "This website I made can help you manage your budget better.Through it, you can create infinite number of lists. Each list calculates its total for you automatically each time you add or remove an item. Also there is no limit as to how much items you can delete and add I have also added localStorage too to make more easy to use. So everytime you need to leave your phone and come back to it later or everytime you refresh the page, you will lose no data at all. ",
+    desc: `This website I made can help you manage your budget better. Through it, you can create infinite number of lists. \n\n Each list calculates its total for you automatically each time you add or remove an item. Also there is no limit as to how much items you can delete and add I have also added localStorage too to make more easy to use. \n\n So everytime you need to leave your phone and come back to it later or everytime you refresh the page, you will lose no data at all. \n\n Click on the link below to view the website live: \n\n`,
     url: "https://groceryhelper2022.netlify.app/",
   },
   {
@@ -147,7 +147,7 @@ export const projects = [
     text: "Projects Website",
     category: "Web",
     vid: "",
-    desc: "Inspired by John Smilga's projects website, I decided to categorize and create my own collection of projects all under one website. I used Figma to draw out my plan and decide on which colour scheme looks best. Then I started with the SCSS and HTML followed by JS. I made sure its responsive on all screens and has the least cross browser compatibility issues possible. I used GitHub Webpages and also Netlify this time to publish my website by committing and pushing the code from my VS Code directly to GitHub and Netlify.  So far, I only have Vanilla JS projects to share with you on it. I envision this website to be filled with amazing projects in the future as I teach myself more skills.",
+    desc: "Inspired by John Smilga's projects website, I decided to categorize and create my own collection of projects all under one website. \n\n I used Figma to draw out my plan and decide on which colour scheme looks best. Then I started with the SCSS and HTML followed by JS. I made sure its responsive on all screens and has the least cross browser compatibility issues possible. \n\n I then used GitHub Webpages and also Netlify this time to publish my website by committing and pushing the code from my VS Code directly to GitHub and Netlify. \n\n  At the time I did this website, I only knew Vanilla JS so its not as good as the website your on right now.  \n\n I envision this website to be filled with amazing projects in the future as I teach myself more and more skills. \n\n Click on the link below to view the website live: \n\n ",
     url: "https://projects-fatima.netlify.app/",
   },
   {
@@ -156,7 +156,7 @@ export const projects = [
     text: "Portfolio Website",
     category: "Web",
     vid: "",
-    desc: " It all started with watching some freeCodeCamp and Udemy tutorials and imitating some of their landing webpages. I then got the inspiration to create my own website and to design it myself as well. I started out with Figma to visualize the design and to figure out how to place all the elements together. After that, I used HTML, SCSS and JavaScript to bring my design to life. I made sure it is responsive to all different screen sizes. I also made sure it is easy to navigate through it no matter which device you are on. I used Gihub Webpages, afterwards to publish my website by commiting and pushing the code from VS Code directly to Github.As you can see by now since you are on the website, it has so much to tell you about who I am which was my goal for this project. Currently, I am learning more about JavaScript and React and applying what I learn to improve on this website everytime I get the chance to.",
+    desc: "This was my first portfolio webpage prior to the one you were on just few seconds ago. Unlike the most recent portfolio I have which utelises React, this website only uses Vanilla JS, HTML5 and CSS3. \n\n I started out with Figma to visualize the design and to figure out how to place all the elements together. I made sure it is responsive to all different screen sizes. I also made sure it is easy to navigate through it no matter which device you are on. \n\n Feel free to click on the website link below, to see how improved this website is, which you are currently on, now that I am using React. \n\n",
     url: "https://fatima-labade.netlify.app/page3.html#",
   },
 ];

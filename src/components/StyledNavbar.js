@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
+import { GiCrossedAirFlows } from "react-icons/gi";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import { links } from "../data";
@@ -80,7 +81,14 @@ const Navbar = () => {
       </motion.nav>
 
       <div className='menuIcon'>
-        <AiOutlineMenu onClick={() => handleMenuLink()} />
+        {pressed ? (
+          <GiCrossedAirFlows
+            className='x-icon'
+            onClick={() => handleMenuLink()}
+          />
+        ) : (
+          <AiOutlineMenu onClick={() => handleMenuLink()} />
+        )}
       </div>
       <motion.div
         className='menuContainer'
@@ -95,19 +103,17 @@ const Navbar = () => {
                 const { id, url, text } = link;
 
                 return (
-                  <motion.div key={id} variants={animateNavItems}>
-                    <NavLink
-                      className='menu-links'
-                      key={id}
-                      id={id}
-                      to={url}
-                      onClick={() => {
-                        handleMenuLink();
-                      }}
-                    >
-                      {text}
-                    </NavLink>
-                  </motion.div>
+                  <NavLink
+                    className='menu-links'
+                    key={id}
+                    id={id}
+                    to={url}
+                    onClick={() => {
+                      handleMenuLink();
+                    }}
+                  >
+                    {text}
+                  </NavLink>
                 );
               })}
           </ul>
