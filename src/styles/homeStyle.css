@@ -1,0 +1,32 @@
+.swiper-container {
+  width: 100% !important;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+.swiper-slide {
+  display: grid;
+  width: auto !important;
+  height: fit-content !important;
+  text-align: center;
+  padding: 0rem 0rem;
+}
+.swiper-slide img {
+  display: block;
+  width: 6rem;
+  justify-self: center;
+  margin-top: 0.6rem;
+}
+.swiper-slide-hobbies {
+  display: grid;
+  width: auto !important;
+  height: fit-content !important;
+  text-align: center;
+  padding: 0rem 0rem;
+}
+.swiper-slide-hobbies img {
+  display: grid;
+  width: auto !important;
+  height: 25rem !important;
+  text-align: center;
+  padding: 0rem 0rem;
+}

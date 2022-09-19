@@ -105,24 +105,8 @@ const Skills = () => {
         <div className='section-center-skills'>
           <Swiper
             spaceBetween={5}
-            slidesPerView={1}
+            slidesPerView={window.innerWidth < 300 ? 2 : "auto"}
             navigation
-            breakpoints={{
-              300: {
-                slidesPerView: 2,
-                width: 300,
-              },
-              // when window width is >= 640px
-              823: {
-                slidesPerView: 4,
-                width: 823,
-              },
-              // when window width is >= 768px
-              850: {
-                slidesPerView: 6,
-                width: 850,
-              },
-            }}
             onSlideChange={() => console.log("slideChange")}
             onSwiper={(swiper) => console.log(swiper)}
           >

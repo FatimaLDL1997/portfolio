@@ -2,11 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { topSkills, topProjects } from "../data";
 import {
-  BsArrowDown,
-  BsArrowLeftCircleFill,
-  BsArrowRightCircleFill,
-} from "react-icons/bs";
-import {
   fadeIn,
   fadeInZoom,
   animateSkill,
@@ -15,14 +10,19 @@ import {
   animateAboutItem,
   lineAnimation,
 } from "../animations";
-import SwiperCore, { Navigation, Scrollbar, Pagination } from "swiper";
+
+import { useEffect, useState } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { useEffect, useState } from "react";
-SwiperCore.use([Navigation, Pagination, Scrollbar]);
+import "swiper/css/effect-coverflow";
+import "../styles/homeStyle.css";
+import SwiperCore, { EffectCoverflow, Pagination, Navigation } from "swiper";
+
+SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const Home = () => {
   const [smallScreen, setSmallScreen] = useState(false);
@@ -136,36 +136,26 @@ const Home = () => {
       >
         <h1 className='subpage-title'>Top Projects</h1>
         <motion.hr className='line' variants={lineAnimation}></motion.hr>
+
         <div variants={animateAboutItem} className='top-project-container'>
           <Swiper
-            spaceBetween={5}
-            slidesPerView={1}
-            navigation
-            breakpoints={{
-              345: {
-                slidesPerView: 2,
-                // width: 300,
-              },
-              // when window width is >= 640px
-              823: {
-                slidesPerView: 4,
-                // width: 823,
-              },
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 6,
+              slideShadows: true,
             }}
-            pagination={{ clickable: true }}
-            scrollbar={{ draggable: true }}
-            onSlideChange={() => console.log("slideChange")}
-            onSwiper={(swiper) => console.log(swiper)}
           >
             {topProjects.map((project) => {
               const { text, id, icon, category } = project;
               return (
                 <SwiperSlide key={id}>
-                  <a
-                    variants={animateSkillItem}
-                    className='topProjectItem'
-                    href={`/projects/${id}`}
-                  >
+                  <a href='' className='topProjectItem'>
                     <div className='image'>{icon}</div>
                     <h1 className='topProjectText'>{text}</h1>
                     <h2 className='topProjectCtgry'>{category}</h2>

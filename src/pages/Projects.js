@@ -66,22 +66,8 @@ const Projects = () => {
         <div className={`btns-container `}>
           <Swiper
             spaceBetween={5}
-            slidesPerView={1}
+            slidesPerView={window.innerWidth < 300 ? 1 : "auto"}
             navigation
-            breakpoints={{
-              300: {
-                slidesPerView: 2,
-                width: 300,
-              },
-              600: {
-                slidesPerView: 3,
-                width: 600,
-              },
-              850: {
-                slidesPerView: 6,
-                width: 850,
-              },
-            }}
             onSlideChange={() => console.log("slideChange")}
             onSwiper={(swiper) => console.log(swiper)}
           >
@@ -105,20 +91,8 @@ const Projects = () => {
         <div className='section-center'>
           <Swiper
             spaceBetween={5}
-            slidesPerView={1}
+            slidesPerView={window.innerWidth < 300 ? 1 : "auto"}
             navigation
-            breakpoints={{
-              // when window width is >= 640px
-              823: {
-                slidesPerView: 2,
-                width: 823,
-              },
-              // when window width is >= 768px
-              850: {
-                slidesPerView: 3,
-                width: 850,
-              },
-            }}
             onSlideChange={() => console.log("slideChange")}
             onSwiper={(swiper) => console.log(swiper)}
           >

@@ -1,9 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { hobbies } from "../data";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import { fullScreenAnimation } from "../animations";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "../styles/homeStyle.css";
+import SwiperCore, { EffectCoverflow, Pagination, Navigation } from "swiper";
+
+SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const Hobbies = () => {
   const [index, setIndex] = useState(1);
@@ -22,29 +33,6 @@ const Hobbies = () => {
     return number;
   };
 
-  const nextImage = (e) => {
-    e.preventDefault();
-    setClickedLeft(false);
-    setClickedRight(true);
-
-    setIndex((index) => {
-      let newIndex = index + 1;
-
-      return checkIndex(newIndex);
-    });
-  };
-
-  const prevImage = (e) => {
-    e.preventDefault();
-    setClickedRight(false);
-    setClickedLeft(true);
-
-    setIndex((index) => {
-      let newIndex = index - 1;
-
-      return checkIndex(newIndex);
-    });
-  };
   const [scroll, setScroll] = useState(1);
   useEffect(() => {
     const onScroll = () => {
@@ -82,33 +70,30 @@ const Hobbies = () => {
           <BsChevronDoubleDown />
         </div>
         <div className='image-carousal'>
-          {hobbies.map((hobby) => {
-            const { id, text, img } = hobby;
-            return (
-              <div key={id}>
-                {index === id && (
-                  <div className='hobbiesContainer'>
-                    <h2 className='hobbiesTitle'>{text}</h2>
-                    <img
-                      className={`hobbiesImg  ${
-                        clickedRight
-                          ? "animateRight"
-                          : clickedLeft
-                          ? "animateLeft"
-                          : ""
-                      }`}
-                      src={img}
-                      alt=''
-                    />
-                  </div>
-                )}
-              </div>
-            );
-          })}
-          <div className={`arrows-show ${scroll ? "" : "arrows-hide"}`}>
-            <AiOutlineLeft className='left' onClick={(e) => nextImage(e)} />
-            <AiOutlineRight className='right' onClick={(e) => prevImage(e)} />
-          </div>
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 20,
+              stretch: 0,
+              depth: 50,
+              modifier: 3,
+              slideShadows: true,
+            }}
+            className='swiper-slide-hobbies'
+          >
+            {hobbies.map((hobby) => {
+              const { id, text, img } = hobby;
+
+              return (
+                <SwiperSlide key={id}>
+                  <img src={img} alt={text} />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </motion.section>
     </>

@@ -44,25 +44,22 @@ html {
   line-height: 2.5rem;
 }
 .top-project-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  padding: 3rem;
-  justify-content: flex-start;
-  overflow-x: scroll !important;
-  overflow-y: hidden !important;
+  background-position: center;
+  background-size: cover;
+  padding-top: 3rem;
 }
+
 .topProjectItem {
   color: white;
+  background: rgb(232, 212, 161);
   font-weight: "900";
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  /* min-width: 10rem; */
+  min-width: 10rem;
   padding: 0.5rem;
-  background: #faedcd;
   justify-content: center;
-  /* font-size: 1rem; */
+  font-size: 1rem;
   font-family: "Josefin Slab";
   font-style: normal;
   font-weight: 400;
@@ -122,33 +119,6 @@ html {
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   background: #905f0a;
-}
-
-.swiper-container {
-  width: 350px !important;
-}
-
-@media screen and (min-width: 300px) {
-  .swiper-container {
-    width: 300px !important;
-  }
-}
-@media screen and (min-width: 823px) {
-  .swiper-container {
-    width: 823px !important;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .swiper-container {
-    width: 600px !important;
-  }
-}
-
-@media screen and (min-width: 850px) {
-  .swiper-container {
-    width: 850px !important;
-  }
 }
 
 .bottom-footer {
@@ -692,10 +662,10 @@ li {
 }
 
 .hobbiesContainer {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100vh;
+  align-items: center; */
+  /* height: 100vh; */
 }
 .hobbiesTitle {
   font-size: 3vmax;
@@ -707,11 +677,11 @@ li {
 }
 .hobbiesImg {
   /* border-radius: 2rem; */
-  width: auto;
-  height: 70vh;
-  display: flex;
+  /* width: auto;
+  height: 70vh; */
+  /* display: flex;
   justify-content: center;
-  text-align: center;
+  text-align: center; */
 }
 .animateLeft {
   animation: slideLeft;
@@ -760,8 +730,8 @@ li {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-width: 6rem;
-  min-height: 5rem;
+  min-width: 8rem;
+  min-height: 8rem;
 
   padding: 0.5rem;
   background: #faedcd;
@@ -953,18 +923,19 @@ a {
 .projectItem:hover {
   animation: changeColor 1s;
   animation-fill-mode: forwards;
-  transform: scale(1.1);
-  transition: 1s ease-in-out;
+  /* transform: scale(1.1); */
+  transition: 2s ease-in-out;
   cursor: pointer;
   -webkit-box-shadow: 8px 8px 8px -3px rgba(0, 0, 0, 0.25);
   box-shadow: 10px 16px 19px 1px rgb(0 0 0 / 25%);
 }
+
 @keyframes changeColor {
   from {
     background-color: #faedcd;
   }
   to {
-    background-color: #e9edc9;
+    background-color: #b6b99c;
   }
 }
 .descText {
@@ -1020,8 +991,8 @@ a {
   font-size: 80px;
 }
 .skillIcon {
-  height: 2rem;
-  width: auto;
+  height: 3rem;
+  width: auto !important;
 }
 
 .resume {
