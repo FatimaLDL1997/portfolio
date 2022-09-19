@@ -64,9 +64,23 @@ const Skills = () => {
       <div className='projectsContainer'>
         <div className={`btns-container `}>
           <Swiper
-            spaceBetween={smallScreen ? 5 : 10}
-            slidesPerView={smallScreen ? 2 : 6}
+            spaceBetween={5}
+            slidesPerView={1}
             navigation
+            breakpoints={{
+              300: {
+                slidesPerView: 2,
+                width: 300,
+              },
+              600: {
+                slidesPerView: 3,
+                width: 600,
+              },
+              850: {
+                slidesPerView: 6,
+                width: 850,
+              },
+            }}
             onSlideChange={() => console.log("slideChange")}
             onSwiper={(swiper) => console.log(swiper)}
           >
@@ -90,9 +104,25 @@ const Skills = () => {
 
         <div className='section-center-skills'>
           <Swiper
-            spaceBetween={smallScreen ? 10 : 25}
-            slidesPerView={smallScreen ? 2 : 6}
+            spaceBetween={5}
+            slidesPerView={1}
             navigation
+            breakpoints={{
+              300: {
+                slidesPerView: 2,
+                width: 300,
+              },
+              // when window width is >= 640px
+              823: {
+                slidesPerView: 4,
+                width: 823,
+              },
+              // when window width is >= 768px
+              850: {
+                slidesPerView: 6,
+                width: 850,
+              },
+            }}
             onSlideChange={() => console.log("slideChange")}
             onSwiper={(swiper) => console.log(swiper)}
           >

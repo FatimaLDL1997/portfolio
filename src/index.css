@@ -123,6 +123,34 @@ html {
   .swiper-pagination-bullet {
   background: #905f0a;
 }
+
+.swiper-container {
+  width: 350px !important;
+}
+
+@media screen and (min-width: 300px) {
+  .swiper-container {
+    width: 300px !important;
+  }
+}
+@media screen and (min-width: 823px) {
+  .swiper-container {
+    width: 823px !important;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .swiper-container {
+    width: 600px !important;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .swiper-container {
+    width: 850px !important;
+  }
+}
+
 .bottom-footer {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -718,7 +746,7 @@ li {
 .projectText {
   list-style-type: none;
   font-weight: 300;
-  font-size: 3vh;
+  font-size: 1.5rem;
   padding-bottom: 10px;
 }
 .skillText {
@@ -907,15 +935,19 @@ a {
   padding-bottom: 10rem !important;
 }
 .projectItem {
-  background-color: #faedcd;
-  color: black;
-  /* border-radius: 20px; */
-  padding: 5%;
-  width: 200px;
-  min-width: fit-content;
-  /* -webkit-box-shadow: 8px 8px 8px -3px rgba(0, 0, 0, 0.25);
-  box-shadow: 8px 8px 8px -3px rgb(0 0 0 / 25%); */
+  color: rgb(28, 7, 7);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 15rem;
+  min-height: 10rem;
+
+  padding: 0.5rem;
+  background: #faedcd;
   justify-content: center;
+  font-family: "Josefin Slab";
+  font-style: normal;
+  align-items: center;
 }
 
 .projectItem:hover {

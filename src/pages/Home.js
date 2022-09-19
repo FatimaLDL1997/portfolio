@@ -138,9 +138,20 @@ const Home = () => {
         <motion.hr className='line' variants={lineAnimation}></motion.hr>
         <div variants={animateAboutItem} className='top-project-container'>
           <Swiper
-            spaceBetween={40}
-            slidesPerView={smallScreen ? 2 : 3}
+            spaceBetween={5}
+            slidesPerView={1}
             navigation
+            breakpoints={{
+              345: {
+                slidesPerView: 2,
+                // width: 300,
+              },
+              // when window width is >= 640px
+              823: {
+                slidesPerView: 4,
+                // width: 823,
+              },
+            }}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             onSlideChange={() => console.log("slideChange")}
