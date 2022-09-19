@@ -47,6 +47,12 @@ html {
   color: #3a2408;
   transition: ease-in-out 1s;
 }
+.icon-container {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 5;
+}
 .icon-container a {
   position: fixed;
   left: 0.5rem;
@@ -1047,6 +1053,7 @@ a {
   align-items: center;
   justify-content: center;
   opacity: 0.3;
+  z-index: 1;
 }
 .page-control:hover {
   animation: fadeIn 0.5s ease-in-out;
