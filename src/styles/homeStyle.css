@@ -31,6 +31,13 @@
   text-align: center;
   padding: 0rem 0rem;
 }
+/*when small screen */
+@media screen and (max-width: 800px) {
+  .swiper-slide-hobbies img {
+    width: auto !important;
+    height: 15rem !important;
+  }
+}
 .swiper-slide-skills {
   display: grid;
   width: auto !important;

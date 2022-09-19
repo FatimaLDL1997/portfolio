@@ -47,12 +47,7 @@ const Projects = () => {
   };
 
   return (
-    <motion.section
-      variants={fullScreenAnimation}
-      initial='hidden'
-      animate='show'
-      className='pageContainer'
-    >
+    <section initial='hidden' animate='show' className='pageContainer'>
       <div className='titleContainer'>
         <h2 className='pageTitle'>Projects</h2>
       </div>
@@ -113,7 +108,7 @@ const Projects = () => {
           </Swiper>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

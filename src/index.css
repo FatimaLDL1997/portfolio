@@ -746,12 +746,6 @@ li {
   font-style: normal;
   align-items: center;
 }
-.skillItem:hover {
-  transition: 1s ease-in-out;
-  transform: scale(1.1);
-  background: #e9edc9;
-  color: black;
-}
 
 .skillsText {
   list-style-type: none;
@@ -898,6 +892,8 @@ a {
   flex-direction: row;
   justify-content: center;
   padding-bottom: 25rem;
+  padding-top: 3rem;
+
   position: relative;
   z-index: 3;
   padding-left: 9vw;
@@ -909,6 +905,7 @@ a {
   padding-left: 3rem;
   padding-right: 3rem;
   padding-bottom: 25rem !important;
+  padding-top: 3rem !important;
 }
 .projectItem {
   color: rgb(28, 7, 7);
@@ -926,24 +923,6 @@ a {
   align-items: center;
 }
 
-.projectItem:hover {
-  animation: changeColor 1s;
-  animation-fill-mode: forwards;
-  /* transform: scale(1.1); */
-  transition: 2s ease-in-out;
-  /* cursor: pointer; */
-  -webkit-box-shadow: 8px 8px 8px -3px rgba(0, 0, 0, 0.25);
-  box-shadow: 10px 16px 19px 1px rgb(0 0 0 / 25%);
-}
-
-@keyframes changeColor {
-  from {
-    background-color: #faedcd;
-  }
-  to {
-    background-color: #b6b99c;
-  }
-}
 .descText {
   text-align: center;
   font-family: "Ibarra Real Nova";
