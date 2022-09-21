@@ -90,12 +90,14 @@ const Projects = () => {
             centeredSlides={true}
             slidesPerView={"auto"}
             coverflowEffect={{
-              rotate: 50,
+              rotate: 0,
               stretch: 0,
-              depth: 100,
-              modifier: 6,
+              depth: 10,
+              modifier: 3,
               slideShadows: true,
             }}
+            keyboard={true}
+            navigation
             className='swiper-slide-skills'
           >
             {menuItems.map((project) => {

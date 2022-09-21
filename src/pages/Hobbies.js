@@ -76,12 +76,14 @@ const Hobbies = () => {
             centeredSlides={true}
             slidesPerView={"auto"}
             coverflowEffect={{
-              rotate: 20,
+              rotate: 0,
               stretch: 0,
-              depth: 50,
-              modifier: 3,
+              depth: 20,
+              modifier: 4,
               slideShadows: true,
             }}
+            keyboard={true}
+            navigation
             className='swiper-slide-hobbies'
           >
             {hobbies.map((hobby) => {

@@ -376,7 +376,7 @@ li {
   background-color: #d4a373;
   width: 0vw;
   height: 0rem;
-  border-radius: 2%;
+  /* border-radius: 2%; */
   animation-name: animateOpacityOut;
   animation-fill-mode: forwards;
   animation-duration: 1s;
@@ -393,10 +393,11 @@ li {
   text-align: center;
   width: 80vw;
   height: 60vh;
-  border: thick;
-  border-style: double;
+  top: 10vh;
+  /* border: thick; */
+  /* border-style: double;
   border-color: black;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem; */
   animation-name: animateOpacityIn;
   animation-duration: 1s;
   position: fixed;
@@ -769,11 +770,6 @@ li {
   font-size: 1.5rem;
   padding-bottom: 10px;
 }
-.skillText {
-  font-weight: 900;
-  font-size: 1.2rem;
-  padding: 1%;
-}
 
 .skillItem {
   color: rgb(28, 7, 7);
@@ -789,7 +785,13 @@ li {
   font-style: normal;
   align-items: center;
 }
-
+.skillText {
+  list-style-type: none;
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 10px;
+}
 .skillsText {
   list-style-type: none;
   font-weight: 300;

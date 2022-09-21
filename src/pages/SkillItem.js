@@ -9,8 +9,9 @@ const SkillItem = () => {
 
   return (
     <section>
-      <h1 className='projectTitle'>{text}</h1>
       <h3 className='categoryTitle'>{category}</h3>
+
+      <h1 className='projectTitle'>{text}</h1>
     </section>
   );
 };

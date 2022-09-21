@@ -125,10 +125,14 @@ const Home = () => {
                 </motion.li>
               );
             })}
+            <motion.a
+              variants={animateSkillItem}
+              className='go-to-skills'
+              href='/skills'
+            >
+              See More
+            </motion.a>
           </motion.ul>
-          <a className='go-to-skills' href='/skills'>
-            See More
-          </a>
         </div>
       </motion.div>
 
@@ -149,12 +153,14 @@ const Home = () => {
             centeredSlides={true}
             slidesPerView={"auto"}
             coverflowEffect={{
-              rotate: 50,
+              rotate: 0,
               stretch: 0,
-              depth: 100,
-              modifier: 6,
+              depth: 10,
+              modifier: 3,
               slideShadows: true,
             }}
+            keyboard={true}
+            navigation
           >
             {topProjects.map((project) => {
               const { text, id, icon, category } = project;

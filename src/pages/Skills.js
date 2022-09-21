@@ -12,9 +12,15 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-coverflow";
 import "../styles/homeStyle.css";
-import SwiperCore, { EffectCoverflow, Pagination, Navigation } from "swiper";
+import "swiper/css/keyboard";
+import SwiperCore, {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+  Keyboard,
+} from "swiper";
 
-SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
+SwiperCore.use([EffectCoverflow, Keyboard, Pagination, Navigation]);
 
 const categories = ["all", ...new Set(skills.map((item) => item.category))];
 const Skills = () => {
@@ -106,12 +112,14 @@ const Skills = () => {
             centeredSlides={true}
             slidesPerView={"auto"}
             coverflowEffect={{
-              rotate: 50,
+              rotate: 0,
               stretch: 0,
-              depth: 100,
-              modifier: 6,
+              depth: 10,
+              modifier: 3,
               slideShadows: true,
             }}
+            keyboard={true}
+            navigation
             className='swiper-slide-skills'
           >
             {menuItems.map((skill) => {
