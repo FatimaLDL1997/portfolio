@@ -5,8 +5,12 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Hobbies from "./pages/Hobbies";
 import ProjectItem from "./pages/ProjectItem";
-
+import Error from "./pages/Error";
 import SharedLayout from "./pages/SharedLayout";
+import Purchase from "./pages/Purchase";
+import SharedShopLayout from "./pages/SharedShopLayout";
+import Checkout from "./pages/Checkout";
+import { useGlobalContext } from "./context";
 
 function App() {
   return (
@@ -20,6 +24,12 @@ function App() {
           <Route path='projects/:projectId' element={<ProjectItem />} />
           <Route path='hobbies' element={<Hobbies />} />
         </Route>
+        {/* <Route path='purchase' element={<Purchase />} /> */}
+        <Route path='/purchase' element={<SharedShopLayout />}>
+          <Route index element={<Purchase />} />
+          <Route path='/purchase/checkout' element={<Checkout />} />
+        </Route>
+        <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
   );

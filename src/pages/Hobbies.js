@@ -1,10 +1,10 @@
 import React from "react";
-import { hobbies } from "../data";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import { fullScreenAnimation } from "../animations";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+import { hobbies } from "../data";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -13,26 +13,11 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "../styles/homeStyle.css";
 import SwiperCore, { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { NavLink } from "react-router-dom";
 
 SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const Hobbies = () => {
-  const [index, setIndex] = useState(1);
-  const [clickedLeft, setClickedLeft] = useState(false);
-  const [clickedRight, setClickedRight] = useState(false);
-
-  let length = hobbies.length;
-
-  const checkIndex = (number) => {
-    if (number > length - 1) {
-      return 1;
-    }
-    if (number < 1) {
-      return length - 1;
-    }
-    return number;
-  };
-
   const [scroll, setScroll] = useState(1);
   useEffect(() => {
     const onScroll = () => {
@@ -96,6 +81,11 @@ const Hobbies = () => {
               );
             })}
           </Swiper>
+          <div className='purchase-btn-container'>
+            <NavLink className='purchase-btn' to={"/Purchase"}>
+              Buy a Print/Original
+            </NavLink>
+          </div>
         </div>
       </motion.section>
     </>
