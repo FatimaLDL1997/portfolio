@@ -5,6 +5,8 @@ import { hobbies } from "../data";
 import { useState } from "react";
 import { useEffect } from "react";
 
+import { TiArrowBackOutline } from "react-icons/ti";
+
 const Checkout = () => {
   const { cartItems, setCartItems } = useGlobalContext();
   const [count, setCount] = useState([]);
@@ -17,14 +19,11 @@ const Checkout = () => {
   cartItems.forEach((element) => {
     count[element] = (count[element] || 0) + 1;
   });
-  // console.log(filteredHobbies[0].text);
-  console.log(count);
-  useEffect(() => {
-    setCount(count);
-  }, [cartItems]);
+
   filteredHobbies.forEach((filteredHobby) => {
     console.log(filteredHobby.text);
   });
+
   let total = [];
   let sum = 0;
   const getTotal = () => {
@@ -42,6 +41,9 @@ const Checkout = () => {
 
   return (
     <>
+      <NavLink className='back-icon' to={"/purchase"}>
+        <TiArrowBackOutline />
+      </NavLink>
       <div className='checkout-container'>
         {filteredHobbies.map((item, index) => {
           const { id, text, img, price } = item;
@@ -50,15 +52,21 @@ const Checkout = () => {
             <>
               <div className='item-container' key={id}>
                 <div className='info-container'>
-                  <img className='item-img' src={img} alt='' />
-
+                  <div className='img-container-checkout'>
+                    <img className='item-img' src={img} alt='' />
+                  </div>
                   <div className='item-info'>
-                    <h2 className='item-text' key={index}>
-                      {text} x{count[text]}
+                    <h2 className='item-title' key={index}>
+                      {text}
+                      <span> x {count[text]}</span>
                     </h2>
                     <h4 className='item-details'>
                       {text} ${price}/peice
                     </h4>
+                    <div className='change-amount'>
+                      <button className='dec'>-</button>
+                      <button className='inc'>+</button>
+                    </div>
                   </div>
                 </div>
                 <div className='item-price'>${price * count[text]}</div>

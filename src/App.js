@@ -11,6 +11,7 @@ import Purchase from "./pages/Purchase";
 import SharedShopLayout from "./pages/SharedShopLayout";
 import Checkout from "./pages/Checkout";
 import { useGlobalContext } from "./context";
+import PrivateRoute from "./pages/PrivateRoute";
 
 function App() {
   return (
