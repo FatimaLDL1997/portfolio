@@ -26,19 +26,7 @@ function App() {
           <Route path='projects/:projectId' element={<ProjectItem />} />
           <Route path='hobbies' element={<Hobbies />} />
         </Route>
-        {/* <Route path='purchase' element={<Purchase />} /> */}
-        <Route path='/purchase' element={<SharedShopLayout />}>
-          <Route index element={<Purchase />} />
-          <Route path='/purchase/login' element={<Login />} />
-          <Route
-            path='/purchase/checkout'
-            element={
-              <PrivateRoute>
-                <Checkout />
-              </PrivateRoute>
-            }
-          />
-        </Route>
+
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>

@@ -82,12 +82,12 @@ const Hobbies = () => {
             })}
           </Swiper>
           <div className='purchase-btn-container'>
-            <NavLink
+            <a
               className='purchase-btn'
-              to={"https://art-store-fatima.netlify.app/cart"}
+              href={"https://art-store-fatima.netlify.app"}
             >
               Buy a Print/Original
-            </NavLink>
+            </a>
           </div>
         </div>
       </motion.section>
