@@ -12,6 +12,7 @@ import SharedShopLayout from "./pages/SharedShopLayout";
 import Checkout from "./pages/Checkout";
 import { useGlobalContext } from "./context";
 import PrivateRoute from "./pages/PrivateRoute";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -28,7 +29,15 @@ function App() {
         {/* <Route path='purchase' element={<Purchase />} /> */}
         <Route path='/purchase' element={<SharedShopLayout />}>
           <Route index element={<Purchase />} />
-          <Route path='/purchase/checkout' element={<Checkout />} />
+          <Route path='/purchase/login' element={<Login />} />
+          <Route
+            path='/purchase/checkout'
+            element={
+              <PrivateRoute>
+                <Checkout />
+              </PrivateRoute>
+            }
+          />
         </Route>
         <Route path='*' element={<Error />} />
       </Routes>

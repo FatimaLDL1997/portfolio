@@ -13,7 +13,7 @@ const StyledStoreNavbar = () => {
     useAuth0();
 
   const isUser = isAuthenticated && user;
-  console.log(isUser);
+  console.log(window.location.href);
 
   const { cartItems } = useGlobalContext();
   return (
@@ -34,7 +34,7 @@ const StyledStoreNavbar = () => {
           <button
             className='logout'
             onClick={() => {
-              logout({ returnTo: window.location.origin });
+              logout({ returnTo: window.location.href });
             }}
           >
             logout
