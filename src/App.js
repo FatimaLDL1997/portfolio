@@ -7,12 +7,8 @@ import Hobbies from "./pages/Hobbies";
 import ProjectItem from "./pages/ProjectItem";
 import Error from "./pages/Error";
 import SharedLayout from "./pages/SharedLayout";
-import Purchase from "./pages/Purchase";
-import SharedShopLayout from "./pages/SharedShopLayout";
-import Checkout from "./pages/Checkout";
+
 import { useGlobalContext } from "./context";
-import PrivateRoute from "./pages/PrivateRoute";
-import Login from "./pages/Login";
 
 function App() {
   return (
