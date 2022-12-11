@@ -123,8 +123,8 @@ const Skills = () => {
           >
             {menuItems.map((skill) => {
               return (
-                <SwiperSlide>
-                  <Skill key={skill.id} {...skill}></Skill>
+                <SwiperSlide key={skill.id}>
+                  <Skill {...skill}></Skill>
                 </SwiperSlide>
               );
             })}

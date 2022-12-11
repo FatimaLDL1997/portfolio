@@ -102,8 +102,8 @@ const Projects = () => {
           >
             {menuItems.map((project) => {
               return (
-                <SwiperSlide>
-                  <Project key={project.id} {...project}></Project>
+                <SwiperSlide key={project.id}>
+                  <Project {...project}></Project>
                 </SwiperSlide>
               );
             })}
