@@ -8,8 +8,6 @@ import ProjectItem from "./pages/ProjectItem";
 import Error from "./pages/Error";
 import SharedLayout from "./pages/SharedLayout";
 
-import { useGlobalContext } from "./context";
-
 function App() {
   return (
     <BrowserRouter>
