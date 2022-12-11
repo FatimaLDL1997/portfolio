@@ -109,13 +109,12 @@ const Skills = () => {
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={"auto"}
+            slidesPerView={"5"}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
-              depth: 10,
-              modifier: 3,
+              depth: 0,
+              modifier: 1,
               slideShadows: true,
             }}
             keyboard={true}

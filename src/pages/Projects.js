@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { projects } from "../data";
 import Project from "./Project";
-import { fullScreenAnimation } from "../animations";
 import { motion } from "framer-motion";
 import { lineAnimation } from "../animations";
 
@@ -11,6 +10,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+
+import styled from "styled-components";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
@@ -87,13 +88,12 @@ const Projects = () => {
           <Swiper
             effect={"coverflow"}
             grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={"auto"}
+            slidesPerView={"4"}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
-              depth: 10,
-              modifier: 3,
+              depth: 0,
+              modifier: 1,
               slideShadows: true,
             }}
             keyboard={true}
