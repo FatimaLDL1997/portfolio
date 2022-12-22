@@ -89,7 +89,7 @@ const Projects = () => {
             <Swiper
               effect={"coverflow"}
               grabCursor={true}
-              slidesPerView={"2"}
+              slidesPerView={"1"}
               coverflowEffect={{
                 rotate: 0,
                 stretch: 0,
