@@ -48,70 +48,77 @@ const Projects = () => {
   };
 
   return (
-    <section initial='hidden' animate='show' className='pageContainer'>
-      <div className='titleContainer'>
-        <h2 className='pageTitle'>Projects</h2>
-      </div>
-      <motion.hr
-        className='line'
-        variants={lineAnimation}
-        style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
-      ></motion.hr>
+    <Wrapper>
+      <section initial='hidden' animate='show' className='pageContainer'>
+        <div className='titleContainer'>
+          <h2 className='pageTitle'>Projects</h2>
+        </div>
+        <motion.hr
+          className='line'
+          variants={lineAnimation}
+          style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
+        ></motion.hr>
 
-      <div className='projectsContainer'>
-        <div className={`btns-container `}>
-          <Swiper
-            spaceBetween={5}
-            slidesPerView={window.innerWidth < 300 ? 1 : "auto"}
-            navigation
-            onSlideChange={() => console.log("slideChange")}
-            onSwiper={(swiper) => console.log(swiper)}
-          >
-            {categories.map((item, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <button
-                    className={"category-btn"}
-                    type='button'
-                    onClick={() => filterItems(item)}
-                    key={index}
-                    id={index}
-                  >
-                    {item}
-                  </button>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+        <div className='projectsContainer'>
+          <div className={`btns-container `}>
+            <Swiper
+              spaceBetween={5}
+              slidesPerView={window.innerWidth < 300 ? 1 : "auto"}
+              navigation
+              onSlideChange={() => console.log("slideChange")}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              {categories.map((item, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <button
+                      className={"category-btn"}
+                      type='button'
+                      onClick={() => filterItems(item)}
+                      key={index}
+                      id={index}
+                    >
+                      {item}
+                    </button>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
+          <div className='section-center'>
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              slidesPerView={"2"}
+              coverflowEffect={{
+                rotate: 0,
+                stretch: 0,
+                depth: 1,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              keyboard={true}
+              navigation
+              className='swiper-slide-skills'
+            >
+              {menuItems.map((project) => {
+                return (
+                  <SwiperSlide key={project.id}>
+                    <Project {...project}></Project>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
         </div>
-        <div className='section-center'>
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            slidesPerView={"4"}
-            coverflowEffect={{
-              rotate: 0,
-              stretch: 0,
-              depth: 0,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            keyboard={true}
-            navigation
-            className='swiper-slide-skills'
-          >
-            {menuItems.map((project) => {
-              return (
-                <SwiperSlide key={project.id}>
-                  <Project {...project}></Project>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </div>
-      </div>
-    </section>
+      </section>
+    </Wrapper>
   );
 };
 
 export default Projects;
+const Wrapper = styled.div`
+  .swiper-slide-skills {
+    width: 100% !important;
+  }
+`;
