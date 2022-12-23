@@ -123,7 +123,7 @@ const Skills = () => {
               }}
               keyboard={true}
               navigation
-              pagination={{ clickable: true }}
+              // pagination={{ clickable: true }}
               className='swiper-slide-skills'
             >
               {menuItems.map((skill) => {
@@ -148,17 +148,20 @@ const Wrapper = styled.div`
   }
   .skillItem {
     color: rgb(28, 7, 7);
+    background: #faedcd;
+    font-style: normal;
+    font-family: "Josefin Slab";
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     margin: 0 auto;
+    padding: 0.5rem;
+
     min-width: 12rem;
     min-height: 13rem;
-    padding: 0.5rem;
-    background: #faedcd;
-    justify-content: center;
-    font-family: "Josefin Slab";
-    font-style: normal;
-    align-items: center;
   }
 `;
 export default Skills;
