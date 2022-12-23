@@ -83,7 +83,7 @@ export const topProjects = [
     category: "Web",
     vid: "",
     desc: "This project is inspired by a Youtube tutorial. I have used an API called Open Weather Map API. The app has very detailed documentation on how to use its parameters. Using the API endpoint/URL I fetched the data from the API through Axios. Axios is a promise-based HTTP client which allows to communicate to the backend and to make HTTP requests from the browser. I have also used codes for icons from the API itself to display the corresponding icon on the application frontend. \n\n",
-    url: "https://my-first-weather-app-fatima.netlify.app/s",
+    url: "https://my-first-weather-app-fatima.netlify.app/",
   },
   {
     id: 1,
