@@ -201,18 +201,20 @@ const Wrapper = styled.div`
   .top-project-item {
     color: rgb(28, 7, 7);
     background: #faedcd;
-    margin: 0 auto;
-
-    width: 30vw;
-
-    height: 100%;
-    min-height: 14rem;
+    font-style: normal;
+    font-family: "Josefin Slab";
 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+
+    margin: 0 auto;
+    padding: 0.5rem;
+
+    min-width: 12rem;
+    min-height: 14rem;
   }
 `;
 export default Home;
