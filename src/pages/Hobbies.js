@@ -60,23 +60,27 @@ const Hobbies = () => {
             <Swiper
               effect={"coverflow"}
               grabCursor={true}
-              slidesPerView={"3"}
+              spaceBetween={100}
+              slidesPerView={"auto"}
+              watchOverflow={true}
+              centeredSlides={true}
               coverflowEffect={{
-                rotate: 0,
+                rotate: 10,
                 stretch: 0,
-                depth: 0,
-                modifier: 1,
+                depth: 5,
+                modifier: 5,
                 slideShadows: true,
               }}
               keyboard={true}
               navigation
+              pagination={{ clickable: true }}
               className='swiper-slide-hobbies'
             >
               {hobbies.map((hobby) => {
                 const { id, text, img } = hobby;
 
                 return (
-                  <SwiperSlide key={id}>
+                  <SwiperSlide key={id} className='item'>
                     <img src={img} alt={text} />
                   </SwiperSlide>
                 );
@@ -99,9 +103,24 @@ const Hobbies = () => {
 
 const Wrapper = styled.div`
   .swiper-slide-hobbies {
+    width: 90%;
+    padding: 20px;
+  }
+  .item {
+    color: rgb(28, 7, 7);
+    background: #faedcd;
+    margin: 0 auto;
+
+    width: 30vw;
+
+    height: 100%;
+    min-height: 14rem;
+
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
   }
 `;
 export default Hobbies;

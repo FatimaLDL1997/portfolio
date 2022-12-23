@@ -87,19 +87,23 @@ const Projects = () => {
           </div>
           <div className='section-center'>
             <Swiper
+              className='swiper-slider-container'
               effect={"coverflow"}
               grabCursor={true}
-              slidesPerView={"1"}
+              spaceBetween={100}
+              slidesPerView={"auto"}
+              watchOverflow={true}
+              centeredSlides={true}
               coverflowEffect={{
-                rotate: 0,
+                rotate: 10,
                 stretch: 0,
-                depth: 1,
-                modifier: 1,
+                depth: 5,
+                modifier: 5,
                 slideShadows: true,
               }}
               keyboard={true}
               navigation
-              className='swiper-slide-skills'
+              pagination={{ clickable: true }}
             >
               {menuItems.map((project) => {
                 return (
@@ -118,7 +122,26 @@ const Projects = () => {
 
 export default Projects;
 const Wrapper = styled.div`
-  .swiper-slide-skills {
-    width: 100% !important;
+  .swiper-slider-container {
+    width: 90%;
+    padding: 20px;
+  }
+  .project-Item {
+    color: rgb(28, 7, 7);
+    background: #faedcd;
+    margin: 0 auto;
+
+    width: 30vw;
+
+    height: 100%;
+    min-height: 14rem;
+
+    font-family: "Josefin Slab";
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
   }
 `;
