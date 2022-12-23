@@ -10,6 +10,8 @@ import { GiFactory } from "react-icons/gi";
 import { BsPersonCircle } from "react-icons/bs";
 import { AiFillProject } from "react-icons/ai";
 import { TbDeviceComputerCamera } from "react-icons/tb";
+import { TiWeatherPartlySunny } from "react-icons/ti";
+import { BiPaint } from "react-icons/bi";
 
 export const topSkills = [
   {
@@ -66,6 +68,24 @@ export const links = [
 ];
 export const topProjects = [
   {
+    id: 9,
+    icon: <BiPaint />,
+    text: "Art Store Website",
+    category: "Web",
+    vid: "",
+    desc: "This is an online art store where I display all my realistic art that I painted. \n\n I used Figma to design the page keeping in mind the responsiveness of the design, then moved on to implementing the design on VS Code using CSS, HTML, React JS, Styled Components and more. The code was then pushed to Github and deployed using Netlify. \n\n I have learnt how to also create a login page and create private routes as well for this page. I also used Stripe to create a checkout page. Then used Netlify CLI and ntl dev to test it locally. Right now the Stripe payment is still in testing mode but you can use the test card provided on top of the checkout form and make up a cvv and an expiration date. You will see that it works! \n\n",
+    url: "https://art-store-fatima.netlify.app/",
+  },
+  {
+    id: 10,
+    icon: <TiWeatherPartlySunny />,
+    text: "Weather Web Application",
+    category: "Web",
+    vid: "",
+    desc: "This project is inspired by a Youtube tutorial. I have used an API called Open Weather Map API. The app has very detailed documentation on how to use its parameters. Using the API endpoint/URL I fetched the data from the API through Axios. Axios is a promise-based HTTP client which allows to communicate to the backend and to make HTTP requests from the browser. I have also used codes for icons from the API itself to display the corresponding icon on the application frontend. \n\n",
+    url: "https://my-first-weather-app-fatima.netlify.app/s",
+  },
+  {
     id: 1,
     icon: <FaRobot />,
     text: "Autonomous Robot",
@@ -92,6 +112,24 @@ export const topProjects = [
 ];
 
 export const projects = [
+  {
+    id: 9,
+    icon: <BiPaint />,
+    text: "Art Store Website",
+    category: "Web",
+    vid: "",
+    desc: "This is an online art store where I display all my realistic art that I painted. \n\n I used Figma to design the page keeping in mind the responsiveness of the design, then moved on to implementing the design on VS Code using CSS, HTML, React JS, Styled Components and more. The code was then pushed to Github and deployed using Netlify. \n\n I have learnt how to also create a login page and create private routes as well for this page. I also used Stripe to create a checkout page. Then used Netlify CLI and ntl dev to test it locally. Right now the Stripe payment is still in testing mode but you can use the test card provided on top of the checkout form and make up a cvv and an expiration date. You will see that it works! \n\n",
+    url: "https://art-store-fatima.netlify.app/",
+  },
+  {
+    id: 10,
+    icon: <TiWeatherPartlySunny />,
+    text: "Weather Web Application",
+    category: "Web",
+    vid: "",
+    desc: "This project is inspired by a Youtube tutorial. I have used an API called Open Weather Map API. The app has very detailed documentation on how to use its parameters. Using the API endpoint/URL I fetched the data from the API through Axios. Axios is a promise-based HTTP client which allows to communicate to the backend and to make HTTP requests from the browser. I have also used codes for icons from the API itself to display the corresponding icon on the application frontend. \n\n",
+    url: "https://my-first-weather-app-fatima.netlify.app/s",
+  },
   {
     id: 1,
     icon: <FaRobot />,
@@ -158,6 +196,24 @@ export const projects = [
     vid: "",
     desc: "This was my first portfolio webpage prior to the one you are currently on. Unlike the most recent portfolio I have which utelises React, this website only uses Vanilla JS, HTML5 and CSS3. \n\n I started out with Figma to visualize the design and to figure out how to place all the elements together. I made sure it is responsive to all different screen sizes. I also made sure it is easy to navigate through it no matter which device you are on. \n\n Feel free to click on the website link below, to see how improved this website is, which you are currently on, now that I am using React. \n\n",
     url: "https://fatima-labade.netlify.app/page3.html#",
+  },
+  {
+    id: 9,
+    icon: <BiPaint />,
+    text: "Art Store Website",
+    category: "Web",
+    vid: "",
+    desc: "This is an online art store where I display all my realistic art that I painted. \n\n I used Figma to design the page keeping in mind the responsiveness of the design, then moved on to implementing the design on VS Code using CSS, HTML, React JS, Styled Components and more. The code was then pushed to Github and deployed using Netlify. \n\n I have learnt how to also create a login page and create private routes as well for this page. I also used Stripe to create a checkout page. Then used Netlify CLI and ntl dev to test it locally. Right now the Stripe payment is still in testing mode but you can use the test card provided on top of the checkout form and make up a cvv and an expiration date. You will see that it works! \n\n",
+    url: "https://art-store-fatima.netlify.app/",
+  },
+  {
+    id: 10,
+    icon: <TiWeatherPartlySunny />,
+    text: "Weather Web Application",
+    category: "Web",
+    vid: "",
+    desc: "This project is inspired by a Youtube tutorial. I have used an API called Open Weather Map API. The app has very detailed documentation on how to use its parameters. Using the API endpoint/URL I fetched the data from the API through Axios. Axios is a promise-based HTTP client which allows to communicate to the backend and to make HTTP requests from the browser. I have also used codes for icons from the API itself to display the corresponding icon on the application frontend. \n\n",
+    url: "https://my-first-weather-app-fatima.netlify.app/s",
   },
 ];
 export const skills = [
