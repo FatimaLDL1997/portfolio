@@ -1027,10 +1027,10 @@ a {
 }
 .section-center-skills {
   z-index: 3;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  /* padding-left: 3rem; */
+  /* padding-right: 3rem; */
   padding-bottom: 25rem !important;
-  padding-top: 3rem !important;
+  padding-top: 0rem !important;
 }
 .projectItem {
   color: rgb(28, 7, 7);
