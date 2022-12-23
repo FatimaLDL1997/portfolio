@@ -132,7 +132,7 @@ const Home = () => {
                 className='go-to-skills'
                 href='/skills'
               >
-                See More
+                {"->"} See More {"<-"}
               </motion.a>
             </motion.ul>
           </div>
