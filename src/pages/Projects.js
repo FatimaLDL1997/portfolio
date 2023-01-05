@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { projects } from "../data";
 import Project from "./Project";
 import { motion } from "framer-motion";
-import { lineAnimation } from "../animations";
+import { lineAnimation, fullScreenAnimation } from "../animations";
 
 import SwiperCore, { Navigation, Scrollbar, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -49,73 +49,80 @@ const Projects = () => {
 
   return (
     <Wrapper>
-      <section initial='hidden' animate='show' className='pageContainer'>
-        <div className='titleContainer'>
-          <h2 className='pageTitle'>Projects</h2>
-        </div>
-        <motion.hr
-          className='line'
-          variants={lineAnimation}
-          style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
-        ></motion.hr>
+      <motion.div
+        variants={fullScreenAnimation}
+        initial='hidden'
+        animate='show'
+        className='resume'
+      >
+        <section initial='hidden' animate='show' className='pageContainer'>
+          <div className='titleContainer'>
+            <h2 className='pageTitle'>Projects</h2>
+          </div>
+          <motion.hr
+            className='line'
+            variants={lineAnimation}
+            style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
+          ></motion.hr>
 
-        <div className='projectsContainer'>
-          <div className={`btns-container `}>
-            <Swiper
-              spaceBetween={5}
-              slidesPerView={window.innerWidth < 300 ? 1 : "auto"}
-              navigation
-              onSlideChange={() => console.log("slideChange")}
-              onSwiper={(swiper) => console.log(swiper)}
-            >
-              {categories.map((item, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    <button
-                      className={"category-btn"}
-                      type='button'
-                      onClick={() => filterItems(item)}
-                      key={index}
-                      id={index}
-                    >
-                      {item}
-                    </button>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
+          <div className='projectsContainer'>
+            <div className={`btns-container `}>
+              <Swiper
+                spaceBetween={5}
+                slidesPerView={window.innerWidth < 300 ? 1 : "auto"}
+                navigation
+                onSlideChange={() => console.log("slideChange")}
+                onSwiper={(swiper) => console.log(swiper)}
+              >
+                {categories.map((item, index) => {
+                  return (
+                    <SwiperSlide key={index}>
+                      <button
+                        className={"category-btn"}
+                        type='button'
+                        onClick={() => filterItems(item)}
+                        key={index}
+                        id={index}
+                      >
+                        {item}
+                      </button>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+            <div className='section-center'>
+              <Swiper
+                className='swiper-slider-container'
+                effect={"coverflow"}
+                grabCursor={true}
+                spaceBetween={20}
+                slidesPerView={"auto"}
+                watchOverflow={true}
+                centeredSlides={true}
+                coverflowEffect={{
+                  rotate: 10,
+                  stretch: 0,
+                  depth: 5,
+                  modifier: 5,
+                  slideShadows: true,
+                }}
+                keyboard={true}
+                navigation
+                pagination={{ clickable: true }}
+              >
+                {menuItems.map((project) => {
+                  return (
+                    <SwiperSlide key={project.id}>
+                      <Project {...project}></Project>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
           </div>
-          <div className='section-center'>
-            <Swiper
-              className='swiper-slider-container'
-              effect={"coverflow"}
-              grabCursor={true}
-              spaceBetween={20}
-              slidesPerView={"auto"}
-              watchOverflow={true}
-              centeredSlides={true}
-              coverflowEffect={{
-                rotate: 10,
-                stretch: 0,
-                depth: 5,
-                modifier: 5,
-                slideShadows: true,
-              }}
-              keyboard={true}
-              navigation
-              pagination={{ clickable: true }}
-            >
-              {menuItems.map((project) => {
-                return (
-                  <SwiperSlide key={project.id}>
-                    <Project {...project}></Project>
-                  </SwiperSlide>
-                );
-              })}
-            </Swiper>
-          </div>
-        </div>
-      </section>
+        </section>
+      </motion.div>
     </Wrapper>
   );
 };
