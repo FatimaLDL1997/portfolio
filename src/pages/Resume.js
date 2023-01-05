@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
-import { fullScreenAnimation } from "../animations";
+import { fullScreenAnimation, lineAnimation } from "../animations";
 import { motion } from "framer-motion";
 
 const Resume = () => {
@@ -80,6 +80,11 @@ const Resume = () => {
       animate='show'
       className='resume'
     >
+      <motion.hr
+        className='line'
+        variants={lineAnimation}
+        style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
+      ></motion.hr>
       <header className='resume-header'>
         <Document
           style={{ width: "90vw" }}

@@ -56,6 +56,11 @@ const Home = () => {
           initial='hidden'
           style={{ height: "100vh" }}
         >
+          <motion.hr
+            className='line'
+            variants={lineAnimation}
+            style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
+          ></motion.hr>
           <motion.div variants={fadeInZoom} className='hello'>
             HELLO
           </motion.div>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { skills } from "../data";
-import { fullScreenAnimation } from "../animations";
-import { lineAnimation } from "../animations";
+import { fullScreenAnimation, lineAnimation } from "../animations";
 import Skill from "./Skill";
 import { motion } from "framer-motion";
 import styled from "styled-components";

@@ -1,7 +1,8 @@
 import React from "react";
 import { BsChevronDoubleDown } from "react-icons/bs";
-import { fullScreenAnimation } from "../animations";
-import { motion } from "framer-motion";
+import { GiCrossedAirFlows, GiMagnifyingGlass } from "react-icons/gi";
+import { lineAnimation, fullScreenAnimation } from "../animations";
+import { motion, wrapHandler } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { hobbies } from "../data";
@@ -20,6 +21,28 @@ SwiperCore.use([EffectCoverflow, Pagination, Navigation]);
 
 const Hobbies = () => {
   const [scroll, setScroll] = useState(1);
+  const [modalOpen, setModalOpen] = useState(false);
+  // const [hovered, setHovered] = useState(false);
+
+  const [modalContent, setModalContent] = useState(null);
+
+  const handleExpand = (e) => {
+    let image = e.currentTarget.parentElement.parentElement.children[1].src;
+    setModalOpen(!modalOpen);
+    setModalContent(image);
+    // console.log(modalContent);
+  };
+  const handleHover = (e) => {
+    e.currentTarget.children[0].classList.add("cover-text-show");
+    e.currentTarget.classList.add("item-img-blur");
+    // console.log(e.currentTarget);
+  };
+  const handleOutHover = (e) => {
+    e.currentTarget.children[0].classList.remove("cover-text-show");
+    e.currentTarget.classList.remove("item-img-blur");
+    // console.log(e.currentTarget);
+  };
+
   useEffect(() => {
     const onScroll = () => {
       const scrollCheck = window.scrollY > 10;
@@ -35,7 +58,7 @@ const Hobbies = () => {
     <>
       <Wrapper>
         <motion.section
-          className=''
+          // className=''
           variants={fullScreenAnimation}
           initial='hidden'
           animate='show'
@@ -82,11 +105,44 @@ const Hobbies = () => {
 
                 return (
                   <SwiperSlide key={id} className='item'>
-                    <img src={img} alt={text} />
+                    <div
+                      onMouseLeave={(e) => handleOutHover(e)}
+                      onMouseEnter={(e) => {
+                        handleHover(e);
+                      }}
+                    >
+                      <h1 className='cover-text'>
+                        <GiMagnifyingGlass
+                          onClick={(e) => {
+                            handleExpand(e);
+                          }}
+                        />
+                      </h1>
+
+                      <img className='item-img' src={img} alt={text} />
+                    </div>
                   </SwiperSlide>
                 );
               })}
             </Swiper>
+            {modalOpen ? (
+              <div className='modal'>
+                <div className='exit-icon-container'>
+                  <div className='exit-icon'>
+                    <GiCrossedAirFlows
+                      onClick={() => setModalOpen(!modalOpen)}
+                    />
+                  </div>
+                </div>
+                <img
+                  className='modal-img'
+                  src={modalContent != null ? modalContent : ""}
+                  alt=''
+                />
+              </div>
+            ) : (
+              <h1></h1>
+            )}
             <div className='purchase-btn-container'>
               <a
                 className='purchase-btn'
@@ -107,8 +163,53 @@ const Wrapper = styled.div`
     width: 90%;
     padding: 20px;
   }
+  .exit-icon-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 60vw;
+  }
+  .exit-icon {
+    font-size: 2rem;
+    position: relative;
+    cursor: pointer;
+    color: #faedcd;
+  }
+  .exit-icon:hover {
+    color: #e0c98f;
+  }
+  .modal-container {
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    // background: red;
+    position: absolute;
+    // z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal {
+    width: 100vw;
+    height: 100vh;
+
+    // background: green;
+    top: 0;
+
+    position: fixed;
+    z-index: 11;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #506363b3;
+  }
+  .modal-img {
+    height: 70vh;
+    width: auto;
+  }
   .item {
-    color: rgb(28, 7, 7);
     background: #faedcd;
     margin: 0 auto;
 
@@ -122,6 +223,36 @@ const Wrapper = styled.div`
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  .cover-text {
+    position: absolute;
+    z-index: 10 !important;
+
+    font-size: 4rem;
+    color: black;
+    top: 26%;
+    width: 100%;
+    height: fit-content;
+
+    opacity: 0;
+    text-align: center;
+  }
+
+  .cover-text-show {
+    opacity: 1;
+    cursor: pointer;
+    color: #faedcd;
+  }
+  .cover-text-show:hover {
+    color: #e0c98f;
+  }
+
+  .item-img-blur {
+    // cursor: pointer;
+    // webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+    // filter: blur(4px);
+    opacity: 0.8;
   }
 `;
 export default Hobbies;
