@@ -43,10 +43,11 @@ const Hobbies = () => {
           <div className='titleContainer'>
             <h2 className='pageTitle'>Hobbies</h2>
           </div>
-          <hr
+          <motion.hr
             className='line'
+            variants={lineAnimation}
             style={{ color: "#404f4f", height: " 1px", background: "#d4a373" }}
-          ></hr>
+          ></motion.hr>
           <h4 className='discription'>
             Painting is the best thing to do as a hobby. To me at least. It is
             like travelling to another world when I lose myself to my colours

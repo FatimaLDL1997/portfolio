@@ -53,7 +53,7 @@ const Projects = () => {
         variants={fullScreenAnimation}
         initial='hidden'
         animate='show'
-        className='resume'
+        className='projects'
       >
         <section initial='hidden' animate='show' className='pageContainer'>
           <div className='titleContainer'>
