@@ -62,16 +62,6 @@ const Resume = () => {
       return zoomCount;
     });
   };
-  // useEffect(() => {
-  //   window.addEventListener("resize", () => handleResize());
-
-  //   return window.removeEventListener("resize", () => handleResize());
-  // });
-  // useEffect(() => {
-  //   window.addEventListener("click", () => handleResize());
-
-  //   return window.removeEventListener("click", () => handleResize());
-  // });
 
   return (
     <motion.div
@@ -80,6 +70,9 @@ const Resume = () => {
       animate='show'
       className='resume'
     >
+      <div className='titleContainer'>
+        <h2 className='pageTitle'>Resume</h2>
+      </div>
       <motion.hr
         className='line'
         variants={lineAnimation}

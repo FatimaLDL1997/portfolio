@@ -1,6 +1,7 @@
 import React from "react";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import { GiCrossedAirFlows, GiMagnifyingGlass } from "react-icons/gi";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 import { lineAnimation, fullScreenAnimation } from "../animations";
 import { motion, wrapHandler } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -129,7 +130,7 @@ const Hobbies = () => {
               <div className='modal'>
                 <div className='exit-icon-container'>
                   <div className='exit-icon'>
-                    <GiCrossedAirFlows
+                    <AiOutlineCloseCircle
                       onClick={() => setModalOpen(!modalOpen)}
                     />
                   </div>
@@ -166,7 +167,7 @@ const Wrapper = styled.div`
   .exit-icon-container {
     display: flex;
     justify-content: flex-end;
-    width: 60vw;
+    // width: 60vw;
   }
   .exit-icon {
     font-size: 2rem;
@@ -206,8 +207,14 @@ const Wrapper = styled.div`
     background: #506363b3;
   }
   .modal-img {
-    height: 70vh;
+    height: 30rem;
     width: auto;
+  }
+  @media screen and (max-width: 800px) {
+    .modal-img {
+      height: 18rem;
+      width: auto;
+    }
   }
   .item {
     background: #faedcd;
@@ -249,9 +256,6 @@ const Wrapper = styled.div`
   }
 
   .item-img-blur {
-    // cursor: pointer;
-    // webkit-filter: blur(4px); /* Chrome, Safari, Opera */
-    // filter: blur(4px);
     opacity: 0.8;
   }
 `;
