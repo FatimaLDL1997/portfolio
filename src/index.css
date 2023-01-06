@@ -316,6 +316,9 @@ li {
   .menuIcon {
     opacity: 0;
   }
+  .resume-header {
+    padding-top: 1.5rem;
+  }
 
   .menuContainer {
     opacity: 0;
