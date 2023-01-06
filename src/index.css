@@ -313,6 +313,7 @@ li {
   }
   .resume-header {
     padding-top: 0rem !important;
+    padding-bottom: 2rem !important;
     min-height: 0 !important;
   }
   .react-pdf__Page__canvas {
