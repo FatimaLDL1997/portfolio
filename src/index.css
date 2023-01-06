@@ -319,6 +319,9 @@ li {
     width: 80% !important;
     height: 80% !important;
   }
+  .react-pdf__Document {
+    padding-top: 0 !important;
+  }
 }
 /*when its large */
 @media screen and (min-width: 800px) {
