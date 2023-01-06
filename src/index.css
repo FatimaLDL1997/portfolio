@@ -317,7 +317,7 @@ li {
     opacity: 0;
   }
   .resume-header {
-    padding-top: 1.5rem;
+    padding-top: 1.5rem !important;
   }
 
   .menuContainer {
