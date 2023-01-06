@@ -293,7 +293,8 @@ li {
     font-size: 1.5rem !important;
   }
   .zoom-control {
-    display: none !important;
+    /* display: none !important; */
+    top: 12rem !important;
   }
   .home-title {
     font-size: 1.8rem !important;
@@ -310,14 +311,14 @@ li {
     transition: 1s ease-in-out;
     text-decoration: none;
   }
+  .resume-header {
+    padding-top: 1.5rem !important;
+  }
 }
 /*when its large */
 @media screen and (min-width: 800px) {
   .menuIcon {
     opacity: 0;
-  }
-  .resume-header {
-    padding-top: 1.5rem !important;
   }
 
   .menuContainer {
