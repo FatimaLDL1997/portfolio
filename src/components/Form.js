@@ -1,9 +1,23 @@
 import React from "react";
 import { useForm } from "@formspree/react";
 import styled from "styled-components";
+import { useState } from "react";
+import { useEffect } from "react";
 
 const Form = () => {
   const [state, handleSubmit] = useForm("mwkjpgrd");
+  const [error, setError] = useState("");
+  console.log(state);
+
+  useEffect(() => {
+    if (state.errors.length > 0) {
+      console.log(state.errors[0].message);
+      setError(state.errors[0].message);
+      // console.log();
+    } else {
+      setError("");
+    }
+  }, [state]);
 
   if (state.succeeded) {
     return (
@@ -12,8 +26,17 @@ const Form = () => {
       </Wrapper>
     );
   }
+
   return (
     <Wrapper>
+      {error != "" && (
+        <h1
+          className='success-form'
+          style={{ color: "white", textAlign: "center" }}
+        >
+          ** {error} **
+        </h1>
+      )}
       <form
         id='fs-frm'
         name='simple-contact-form'
@@ -67,7 +90,7 @@ const Wrapper = styled.div`
   .success-form {
     padding: 0;
     margin-left: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: "Josefin Slab";
     font-style: normal;
     line-height: 2.5rem;
@@ -82,7 +105,7 @@ const Wrapper = styled.div`
   #fs-frm #card-element:disabled {
     font-family: "Josefin Slab";
     font-style: normal;
-    font-size: 100%;
+    font-size: 1.5rem;
     color: inherit;
     border: none;
     border-radius: 0;
@@ -96,7 +119,7 @@ const Wrapper = styled.div`
   #fs-frm label,
   #fs-frm legend,
   #fs-frm ::placeholder {
-    font-size: 0.825rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
     padding-top: 0.2rem;
     display: flex;
