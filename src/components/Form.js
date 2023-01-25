@@ -80,7 +80,8 @@ const Wrapper = styled.div`
   #fs-frm optgroup,
   #fs-frm label,
   #fs-frm #card-element:disabled {
-    font-family: inherit;
+    font-family: "Josefin Slab";
+    font-style: normal;
     font-size: 100%;
     color: inherit;
     border: none;
