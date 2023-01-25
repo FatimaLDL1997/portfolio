@@ -66,7 +66,7 @@ const Form = () => {
           rows='5'
           name='message'
           id='message'
-          placeholder='Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus.'
+          placeholder='Hi! I have a question about...'
           required=''
         ></textarea>
         <input
@@ -152,16 +152,24 @@ const Wrapper = styled.div`
   #fs-frm [type="button"],
   #fs-frm [type="submit"],
   #fs-frm [type="reset"] {
-    width: auto;
+    background: #404f4f;
+    color: white;
+    border: none;
     cursor: pointer;
-    -webkit-appearance: button;
-    -moz-appearance: button;
+    width: fit-content;
+    padding: 0.2rem 0.6rem 0.2rem 0.6rem;
     appearance: button;
   }
   #fs-frm [type="button"]:focus,
   #fs-frm [type="submit"]:focus,
   #fs-frm [type="reset"]:focus {
     outline: none;
+  }
+  #fs-frm [type="button"]:hover,
+  #fs-frm [type="submit"]:hover,
+  #fs-frm [type="reset"]:hover {
+    background: #607777;
+    color: white;
   }
   #fs-frm [type="submit"],
   #fs-frm [type="reset"] {
