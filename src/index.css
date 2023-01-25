@@ -209,6 +209,14 @@ html {
 
 .container-home {
   margin: 0px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-home-main {
+  margin: 0px;
   padding: 0px;
 }
 .video iframe {
@@ -594,7 +602,7 @@ li {
   top: 0rem;
   text-align: center;
   font-size: 2rem;
-  padding-top: 15vh;
+  padding-top: 0vh;
 }
 .hello {
   position: relative;
@@ -1429,7 +1437,7 @@ a {
   font-size: 1.5rem;
   color: #d4ae6f;
   font-family: "Josefin Slab";
-  padding-top: 5srem;
+  padding-top: 5rem;
 }
 .form-input {
   font-family: "Josefin Slab";

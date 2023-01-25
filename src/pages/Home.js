@@ -11,8 +11,8 @@ import {
   lineAnimation,
 } from "../animations";
 
+import Form from "../components/Form";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { GrFormNextLink } from "react-icons/gr";
 import { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -50,7 +50,7 @@ const Home = () => {
     <Wrapper>
       <section className='homepages-contianer'>
         <motion.div
-          className='container-home'
+          className='container-home-main'
           whileInView='show'
           variants={animateAbout}
           initial='hidden'
@@ -107,11 +107,13 @@ const Home = () => {
           >
             Top Skills
           </motion.h1>
+
           <motion.hr
             className='line'
             style={{ color: "#404f4f", height: " 1px", background: "#404f4f" }}
             variants={lineAnimation}
           ></motion.hr>
+
           <div className='skillContainer'>
             <motion.ul
               variants={animateSkill}
@@ -174,7 +176,7 @@ const Home = () => {
               className='top-projects-container'
             >
               {topProjects.map((project) => {
-                const { text, id, icon, category } = project;
+                const { text, id, icon } = project;
                 return (
                   <SwiperSlide key={id}>
                     <div key={id} className='top-project-item'>
@@ -193,6 +195,44 @@ const Home = () => {
               })}
             </Swiper>
           </div>
+        </motion.div>
+
+        <motion.div
+          className='container-home'
+          variants={animateSkill}
+          whileInView='show'
+          initial='hidden'
+          style={{
+            height: "100vh",
+            background: "#d4a373",
+            display: " flex",
+            flexDirection: "column",
+            opacity: "1",
+            padding: "2rem",
+            alignItems: " center",
+            justifyContent: "center",
+          }}
+        >
+          <motion.h1
+            style={{ color: "#404f4f", fontWeight: "900" }}
+            variants={animateSkillItem}
+            className='subpage-title'
+          >
+            Contact Me
+          </motion.h1>
+
+          <motion.hr
+            className='line'
+            style={{
+              color: "#404f4f",
+              height: "1px",
+              background: "#404f4f",
+              marginBottom: "3rem",
+            }}
+            variants={lineAnimation}
+          ></motion.hr>
+
+          <Form />
         </motion.div>
       </section>
     </Wrapper>
